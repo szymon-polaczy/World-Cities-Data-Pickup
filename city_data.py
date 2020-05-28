@@ -1,10 +1,17 @@
+# -*- coding: utf-8 -*-
 from lxml import html
 import requests
 
-page = requests.get('https://pl.wikipedia.org/wiki/Adrano')
+#page = requests.get('https://pl.wikipedia.org/wiki/Adrano')
 #page = requests.get('https://pl.wikipedia.org/wiki/Nysa')
 #page = requests.get('https://pl.wikipedia.org/wiki/Aci_Catena')
 #page = requests.get('https://pl.wikipedia.org/wiki/Nowa_S%C3%B3l')
+#page = requests.get('')
+#page = requests.get('https://pl.wikipedia.org/wiki/Aprilia_(Latina)')
+#page = requests.get('https://pl.wikipedia.org/wiki/Busto_Arsizio')
+#page = requests.get('https://pl.wikipedia.org/wiki/Cesena')
+#page = requests.get('https://pl.wikipedia.org/wiki/Conegliano')
+page = requests.get('https://pl.wikipedia.org/wiki/Nak%C5%82o_nad_Noteci%C4%85')
 tree = html.fromstring(page.content)
 
 ogtable = tree.xpath('//table[@class="infobox"]/tbody/tr/td/descendant-or-self::text()')
@@ -57,7 +64,8 @@ i = 0
 for ele in table:
     if (ele == "Położenie"):
         print("Connecting two places - COORDINATES")
-        table[i+1] = table[i+1] + "°N | " + table[i+2] + "°E"
+        table[i+1] = table[i+1] + "'N | " + table[i+2] + "'E"
+        table[i+1] = table[i+1].replace(",", '°')
         del table[i+2]
     elif (table[i].find("miasto") != -1 and table[i+1] == 'i' or table[i].find("miasto") != -1 and table[i+1] == 'w' ):
         print("Connecting two places - TYPE OF PLACE")
