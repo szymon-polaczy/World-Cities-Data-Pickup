@@ -38,7 +38,7 @@ for ele in ogtable: #LOOP FOR CLEANING
             table.append(ele)
     i+=1
 
-print(table)
+#print(table)
 
 i = 0
 ntable = {}
@@ -55,3 +55,18 @@ json.dump(ntable, f, ensure_ascii=False)
 #f = json.dumps(json_string, f)
 
 f.closed
+
+#TRZEBA ZAMIENIĆ WSZYSTKIE SPACJE NA _ ŻEBY DOBRZE LINKI DZIAŁAŁY
+
+# BĘDZIE ŹLE DZIAŁAĆ JEŚLI MASZ POWIEDZMY NA STRONIE WŁOSKIEJ - Orio al Serio - I tylko Serio to link - przez co orio al i serio są osobno liczone i żadne nie ma linku
+# mógłbym spróbować coś napisać że sprawdza czy w połączeniu z następnym elementem ma dobrze ale to na przyszłość
+
+#print(requests.get('https://pl.wikipedia.org/wiki/Abano_Terme'))
+i =0
+for ele in ntable:
+    ele = ele.replace(' ', '_')
+    page = requests.get('https://pl.wikipedia.org/wiki/' + ele)
+    print(ele + '    ' + str(page))
+    i+=1
+
+print(i)
