@@ -2,6 +2,8 @@
 # coding=utf-8
 
 from lxml import html
+from mnf import clear_string
+from city_data import city_data
 import json
 import requests
 import copy
@@ -21,16 +23,8 @@ for ele in ogtable: #LOOP FOR CLEANING
 i = 0
 table = []
 for ele in ogtable: #LOOP FOR CLEANING
-    ele = ele.replace("\n", '')
-    ele = ele.replace("•", '')
-    ele = ele.replace("\xa0", ' ')
-    ele = ele.replace("/", '')
-    ele = ele.replace("—", '')
-    ele = ele.replace("(", '')
-    ele = ele.replace(")", '')
-    ele = ele.replace(":", '')
-    ele = ele.replace("\ufeff", '')
-    ele = ele.strip()
+    ele = clear_string(ele)
+
     if (ele != '' and ele != ' '):
         if (ele.find("City Population") != -1):
             break
@@ -38,22 +32,21 @@ for ele in ogtable: #LOOP FOR CLEANING
             table.append(ele)
     i+=1
 
-#print(table)
-
 i = 0
 ntable = {}
 for ele in table:
     zw = table[i]
     ntable[zw.encode("utf-8").decode("utf-8")] = {}
-    #ntable[i][zw] = {}
+
+    c_data = city_data(zw)
+
+    for ele in c_data:
+        ntable[zw.encode("utf-8").decode("utf-8")][ele[0]] = ele[1]
+
     i+=1
 
 f = open('data.json', 'w', encoding='utf-8')
 json.dump(ntable, f, ensure_ascii=False)
-#json_string = json.dumps(ntable, ensure_ascii=False)
-
-#f = json.dumps(json_string, f)
-
 f.closed
 
 #TRZEBA ZAMIENIĆ WSZYSTKIE SPACJE NA _ ŻEBY DOBRZE LINKI DZIAŁAŁY
@@ -61,12 +54,11 @@ f.closed
 # BĘDZIE ŹLE DZIAŁAĆ JEŚLI MASZ POWIEDZMY NA STRONIE WŁOSKIEJ - Orio al Serio - I tylko Serio to link - przez co orio al i serio są osobno liczone i żadne nie ma linku
 # mógłbym spróbować coś napisać że sprawdza czy w połączeniu z następnym elementem ma dobrze ale to na przyszłość
 
-#print(requests.get('https://pl.wikipedia.org/wiki/Abano_Terme'))
-i =0
-for ele in ntable:
-    ele = ele.replace(' ', '_')
-    page = requests.get('https://pl.wikipedia.org/wiki/' + ele)
-    print(ele + '    ' + str(page))
-    i+=1
+#i =0
+#for ele in ntable:
+#    ele = ele.replace(' ', '_')
+#    page = requests.get('https://pl.wikipedia.org/wiki/' + ele)
+#    print(ele + '    ' + str(page))
+#    i+=1
 
-print(i)
+#print(i)
