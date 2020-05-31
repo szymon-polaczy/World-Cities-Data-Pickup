@@ -1,82 +1,73 @@
-# -*- coding: utf-8 -*-
+# coding=utf-8
+
 from lxml import html
-from mnf import clear_string
+from muf import clear_string
 import requests
 
-#page = requests.get('https://pl.wikipedia.org/wiki/Adrano')
-#page = requests.get('https://pl.wikipedia.org/wiki/Nysa')
-#page = requests.get('https://pl.wikipedia.org/wiki/Aci_Catena')
-#page = requests.get('https://pl.wikipedia.org/wiki/Nowa_S%C3%B3l')
-#page = requests.get('https://pl.wikipedia.org/wiki/Aprilia_(Latina)')
-#page = requests.get('https://pl.wikipedia.org/wiki/Busto_Arsizio')
-#page = requests.get('https://pl.wikipedia.org/wiki/Cesena')
-#page = requests.get('https://pl.wikipedia.org/wiki/Conegliano')
-
-
-def city_data(city_name):
-    print(city_name)
-    city_name = city_name.replace(' ', '_')
+def get_basic_city_data(city_name):
     page = requests.get('https://pl.wikipedia.org/wiki/' + city_name)
 
     if (page.status_code != 200):
-        dumy_data = ['none', 'none']
-        return dumy_data
+        return None
 
     tree = html.fromstring(page.content)
+    page_data = tree.xpath('//table[@class="infobox"]/tbody/tr/td/descendant-or-self::text()')
 
-    ogtable = tree.xpath('//table[@class="infobox"]/tbody/tr/td/descendant-or-self::text()')
+    if (page_data == []):
+        return None
+    else:
+        return page_data
 
-    if (ogtable == []):
-        page = requests.get('https://pl.wikipedia.org/wiki/' + city_name + '_(miasto)')
-        tree = html.fromstring(page.content)
 
-        ogtable = tree.xpath('//table[@class="infobox"]/tbody/tr/td/descendant-or-self::text()')
+def city_data(city_name):
+    city_name = city_name.replace(' ', '_')
 
-        if (page.status_code != 200 or ogtable == []):
-            dumy_data = ['none', 'none']
-            return dumy_data
+    city_data = get_basic_city_data(city_name)
+    if (city_data == None):
+        city_data = get_basic_city_data(city_name + "_(miasto)")
+    if (city_data == None):
+        city_data = get_basic_city_data(city_name + "_(Włochy)") #_(Nazwa Państwa) - my guess
+    if (city_data == None):
+        return None
         
-
-
     i = 0
     table = []
-    for ele in ogtable: #LOOP FOR CLEANING
+    for ele in city_data: #LOOP FOR CLEANING
         ele = clear_string(ele)
 
         if (ele != '' and ele != ' '):
             if (ele.find("′E") != -1 or ele.find("′N") != -1 or ele.find('°N') != -1 or ele.find('°E') != -1 or ele.find('″N') != -1 or ele.find('″E') != -1):
                 print("Deleted unused coordinates")
-            elif (ogtable[i-1].find("Położenie") != -1 or ogtable[i-3].find("Położenie") != -1):
+            elif (city_data[i-1].find("Położenie") != -1 or city_data[i-3].find("Położenie") != -1):
                 print("Deleted unused data")
             elif (ele.find("Położenie") != -1):
                 print("Deleted unused data")
                 table.append("Położenie")
-            elif (ogtable[i].find("Kod") != -1 and ogtable[i+1].find("ISTAT") != -1):
+            elif (city_data[i].find("Kod") != -1 and city_data[i+1].find("ISTAT") != -1):
                 print("Connecting two places - KOD ISTAT")
-                ogtable[i+1] = "Kod " + ogtable[i+1]
-            elif (ogtable[i].find("TERC") != -1 and ogtable[i+2].find("TERYT") != -1):
+                city_data[i+1] = "Kod " + city_data[i+1]
+            elif (city_data[i].find("TERC") != -1 and city_data[i+2].find("TERYT") != -1):
                 print("Connecting two places - TERC (TERYT)")
-                ogtable[i+2] = "TERC | " + ogtable[i+2]
-            elif (ogtable[i].find("Urząd miejski") != -1 or ogtable[i].find("Adres urzędu") != -1):
+                city_data[i+2] = "TERC | " + city_data[i+2]
+            elif (city_data[i].find("Urząd miejski") != -1 or city_data[i].find("Adres urzędu") != -1):
                 print("Connecting two places - URZĄD MIEJSKI | ADRES URZĘDU")
-                ogtable[i+2] = ogtable[i+1] + ' | ' + ogtable[i+2]
+                city_data[i+2] = city_data[i+1] + ' | ' + city_data[i+2]
                 table.append(ele)
-                del ogtable[i+1]
+                del city_data[i+1]
             
             elif (ele.find("[") != -1 and ele.find("]") != -1):
                 print("Deleted unused data")
-            elif (ele.find("Flaga") != -1 or ele.find("Herb") != -1):
+            elif (ele.find("Flaga") != -1 or ele.find("Herb") != -1 or ele.find("flaga") != -1 or ele.find("herb") != -1):
                 print("Deleted unused data")
             elif (ele.find("Plan") != -1):
                 print("Deleted unused data")
-            elif (ele.find("Multimedia") != -1):
+            elif (ele.find("Multimedia") != -1 or ele.find("Strona internetowa") != -1 or ele.find("Informacje w Wikipodróżach") != -1):
                 break
             else:
                 table.append(ele)
         i+=1
 
     #ANOTHER LOOP FOR END CLEANING
-    #print(table)
     i = 0
     for ele in table:
         if (ele == "Położenie"):
@@ -91,39 +82,49 @@ def city_data(city_name):
             del table[i+1]
         elif (table[i] == ','):
             del table[i]
-        #TRY BIG TRY
-        elif (ele.find("Populacja") != -1):
-            del table[i], table[i]
-            print("Deleted unused data")
-        elif (table[i-1].find("miasto") != -1 or table[i - 1].find("gmina") != -1):
-            while (table[i].find("Państwo") == -1):
-                del table[i]
-        elif (table[i - 2].find("Burmistrz") != -1 and table[i].find("PD") != -1):
+        elif (table[i - 2].find("Burmistrz") != -1 and table[i].find("PD") != -1 or table[i -2].find("Burmistrz") != -1 and table[i].find("VVD") != -1 or table[i -2].find("Burmistrz") != -1 and table[i].find("2014") != -1): #removing unnecessary words by the mayor's name
             del table[i]
         elif (table[i] == "km²"):
             table[i-1] = table[i-1] + ' ' + table[i]
             del table[i]
         elif (table[i - 1].find("km²") != -1 and table[i].find("km²") != -1):
             table[i - 1] = table[i - 1] + ' ' + table[i]
-            del table[i]    
+            del table[i]
         
         i+=1
+
+    #This loops exists because I need to delete the images titles from the array
+    while(True):
+        print(table)
+        if (table[1].find("Państwo") == -1 and table[1].find("miasto") == -1 and table[1].find("gmina") == -1):
+            del table[1]
+            print("deleted words")
+        elif (table[1].find("gmina") != -1 and table[2].find("Państwo") == -1 or table[1].find("gmina") != -1 and table[2].find("Państwo") == -1):
+            del table[2]
+            print("deleted second words")
+        else:
+            break
+    
+
 
     #ANOTHER BIG TRY
     if (table[1][0] == table[0][0] and table[1][1] == table[0][1]):
         del table[1]
     
-
-    if (table[1].find("miasto") == -1 and table[1].find("gmina") == -1 and table[0] != table[1]):
+    if (table[1].find("miasto") == -1 and table[1].find("gmina") == -1 and table[1].find("Państwo") == -1):
         del table[1]
 
     if (table[1].find("’") != -1):
         del table[1]
-
-
         
     if (table[1] == "Państwo" or table[1] == "Region"):
-            table.insert(0, table[0])
+        table.insert(0, "Nazwa")
+
+    #BIG TRY _ POPULACJA
+    inx = table.index("Populacja")
+    if (table[inx + 1].find("liczba ludności") != -1 or table[inx + 1].find("gęstość") != -1):
+        table.insert(inx + 1, "Brak daty")
+
     #loop for new table
     ntable = []
     j = 0
@@ -136,9 +137,6 @@ def city_data(city_name):
         ntable[k].append(ele)
         j+=1
 
-    #for ele in ntable:
-    #    print(ele)
-
     return ntable
 
-print(city_data("Werona"))
+#print(city_data("Boskoop"))
