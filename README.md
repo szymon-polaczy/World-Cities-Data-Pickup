@@ -12,3 +12,4 @@
 - [ ] main functions are to big - they have to split
 - [ ] make it as fast as it can be
 - [ ] start using try...catch blocks
+- [ ] better image capturing

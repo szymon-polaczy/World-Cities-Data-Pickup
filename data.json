@@ -37,6 +37,7 @@
         "Populacja": "2013",
         "liczba ludności": "18 190",
         "gęstość": "179 os.km²",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Bergeijk_Gemeentehuis.jpg/240px-Bergeijk_Gemeentehuis.jpg",
         "Położenie": "51°316667'N | 5°366667'E"
     },
     "Bergen op Zoom": {
@@ -51,6 +52,7 @@
         "51 940": "974 os.km²",
         "Nr kierunkowy": "0164",
         "Kod pocztowy": "4600–4625",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Bergen_op_zoom_008.jpg/240px-Bergen_op_zoom_008.jpg",
         "Położenie": "51°494444'N | 4°286667'E"
     },
     "Breda": {
@@ -176,6 +178,7 @@
         "36 043": "121 os.km²",
         "Nr kierunkowy": "0524, 0528, 0591",
         "Kod pocztowy": "7740–7759",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Coevorden_Het_Arsenaal.jpg/240px-Coevorden_Het_Arsenaal.jpg",
         "Położenie": "52°666667'N | 6°750000'E"
     },
     "Emmen": {
@@ -193,6 +196,7 @@
         "Nr kierunkowy": "0528",
         "Kod pocztowy": "7900-7919, 7930-7939",
         "Tablice rejestracyjne": "D",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/1/19/Voormalig_kantongerecht_Hoogeveen.jpg/240px-Voormalig_kantongerecht_Hoogeveen.jpg",
         "Położenie": "52°716667'N | 6°466667'E"
     },
     "Meppel": {
@@ -268,6 +272,7 @@
         "71 791": "303 os.km²",
         "Nr kierunkowy": "0320",
         "Kod pocztowy": "8200-8249",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Lelystad_Railway_Bus_Station.jpg/240px-Lelystad_Railway_Bus_Station.jpg",
         "Położenie": "52°500000'N | 5°466667'E"
     },
     "Urk": {
@@ -302,6 +307,7 @@
         "liczba ludności": "55 496",
         "Nr kierunkowy": "0566",
         "Kod pocztowy": "8497",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Drachten_041.JPG/240px-Drachten_041.JPG",
         "Położenie": "53°166667'N | 6°166667'E"
     },
     "Harlingen": {
@@ -318,6 +324,7 @@
         "43 391": "321 os.km²",
         "Nr kierunkowy": "0513, 0516",
         "Kod pocztowy": "8411-8459",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/0/04/Dracht_Heerenveen_28.JPG/240px-Dracht_Heerenveen_28.JPG",
         "Położenie": "52°950000'N | 5°933333'E"
     },
     "Leeuwarden": {
@@ -357,6 +364,7 @@
         "151 341": "443 os.km²",
         "Nr kierunkowy": "+31-55",
         "Kod pocztowy": "7310",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/3/3c/HetLoo3.JPG/240px-HetLoo3.JPG",
         "Położenie": "52°209444'N | 5°968333'E"
     },
     "Arnhem": {

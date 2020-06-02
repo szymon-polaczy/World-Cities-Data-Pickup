@@ -13,10 +13,27 @@ def get_basic_city_data(city_name):
     tree = html.fromstring(page.content)
     page_data = tree.xpath('//table[@class="infobox"]/tbody/tr/td/descendant-or-self::text()')
 
+    #image_data = tree.xpath('//tr[@class="grafika-z-wikidanych"]/td/a/img/@src')
+    #print(image_data)
+
     if (page_data == []):
         return None
     else:
         return page_data
+
+def get_image_city_data(city_name):
+    page = requests.get('https://pl.wikipedia.org/wiki/' + city_name)
+
+    if (page.status_code != 200):
+        return None
+
+    tree = html.fromstring(page.content)
+    image_data = tree.xpath('//tr[@class="grafika-z-wikidanych"]/td/a/img/@src')
+
+    if (image_data == []):
+        return None
+    else:
+        return image_data
 
 
 def city_data(city_name):
@@ -29,6 +46,8 @@ def city_data(city_name):
         city_data = get_basic_city_data(city_name + "_(Włochy)") #_(Nazwa Państwa) - my guess
     if (city_data == None):
         return None
+
+    #print(city_data)
         
     i = 0
     table = []
@@ -38,7 +57,7 @@ def city_data(city_name):
         if (ele != '' and ele != ' '):
             if (ele.find("′E") != -1 or ele.find("′N") != -1 or ele.find('°N') != -1 or ele.find('°E') != -1 or ele.find('″N') != -1 or ele.find('″E') != -1):
                 print("Deleted unused coordinates")
-            elif (city_data[i-1].find("Położenie") != -1 or city_data[i-3].find("Położenie") != -1):
+            elif (city_data[i-1].find("Położenie ") != -1 or city_data[i-3].find("Położenie ") != -1):
                 print("Deleted unused data")
             elif (ele.find("Położenie") != -1):
                 print("Deleted unused data")
@@ -71,10 +90,14 @@ def city_data(city_name):
     i = 0
     for ele in table:
         if (ele == "Położenie"):
-            print("Connecting two places - COORDINATES")
-            table[i+1] = table[i+1] + "'N | " + table[i+2] + "'E"
-            table[i+1] = table[i+1].replace(",", '°')
-            del table[i+2]
+            try:
+                float(table[i+1].replace(',', '.'))
+                print("Connecting two places - COORDINATES")
+                table[i+1] = table[i+1] + "'N | " + table[i+2] + "'E"
+                table[i+1] = table[i+1].replace(",", '°')
+                del table[i+2]
+            except ValueError:
+                print("false alarm - coordinates")  
         elif (table[i].find("miasto") != -1 and table[i+1] == 'i' or table[i].find("miasto") != -1 and table[i+1] == 'w' ):
             print("Connecting two places - TYPE OF PLACE")
             table[i] = table[i] + ' ' + table[i+1] + ' ' + table[i+2]
@@ -95,7 +118,7 @@ def city_data(city_name):
 
     #This loops exists because I need to delete the images titles from the array
     while(True):
-        print(table)
+        #print(table)
         if (table[1].find("Państwo") == -1 and table[1].find("miasto") == -1 and table[1].find("gmina") == -1):
             del table[1]
             print("deleted words")
@@ -121,9 +144,23 @@ def city_data(city_name):
         table.insert(0, "Nazwa")
 
     #BIG TRY _ POPULACJA
-    inx = table.index("Populacja")
-    if (table[inx + 1].find("liczba ludności") != -1 or table[inx + 1].find("gęstość") != -1):
-        table.insert(inx + 1, "Brak daty")
+    try:
+        inx = table.index("Populacja")
+
+        if (table[inx + 1].find("liczba ludności") != -1 or table[inx + 1].find("gęstość") != -1):
+            table.insert(inx + 1, "Brak daty")
+    except ValueError:
+        print("There was no - Populacja")
+
+
+    #IMAGE DATA
+    img_data = get_image_city_data(city_name)
+    if (img_data == None):
+        img_data = get_image_city_data(city_name + "_(miasto)")
+    if (img_data == None):
+        img_data = get_image_city_data(city_name + "_(Włochy)") #_(Nazwa Państwa) - my guess
+
+        
 
     #loop for new table
     ntable = []
@@ -137,6 +174,9 @@ def city_data(city_name):
         ntable[k].append(ele)
         j+=1
 
+    if (img_data != [] and img_data != None):
+        ntable.insert(len(ntable)-1, ['IMG_SRC', img_data[0]])
+
     return ntable
 
-#print(city_data("Boskoop"))
+#print(city_data("Dzierżyńska_Góra"))

@@ -9,6 +9,7 @@ import copy
 
 #page = requests.get('https://pl.wikipedia.org/wiki/Miasta_we_W%C5%82oszech')
 page = requests.get('https://pl.wikipedia.org/wiki/Miasta_w_Holandii')
+#page = requests.get('https://pl.wikipedia.org/wiki/Bia%C5%82oru%C5%9B')
 tree = html.fromstring(page.content)
 
 ogtable = tree.xpath('//div[@id="mw-content-text"]/div/ul/li/descendant-or-self::text()')
