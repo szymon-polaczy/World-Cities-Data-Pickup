@@ -12,4 +12,6 @@
 - [ ] main functions are to big - they have to split
 - [ ] make it as fast as it can be
 - [ ] start using try...catch blocks
-- [ ] better image capturing
+- [x] better image capturing
+- [ ] there are countries like - Białoruś/Japonia - which have different places to store theirs cities names - better city name capturing
+- [ ] there's a bug with "Położenie" in Tokio - it doesn't get the "Brak danych" mark

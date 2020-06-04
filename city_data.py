@@ -5,6 +5,7 @@ from muf import clear_string
 import requests
 
 def get_basic_city_data(city_name):
+    print(city_name)
     page = requests.get('https://pl.wikipedia.org/wiki/' + city_name)
 
     if (page.status_code != 200):
@@ -12,9 +13,6 @@ def get_basic_city_data(city_name):
 
     tree = html.fromstring(page.content)
     page_data = tree.xpath('//table[@class="infobox"]/tbody/tr/td/descendant-or-self::text()')
-
-    #image_data = tree.xpath('//tr[@class="grafika-z-wikidanych"]/td/a/img/@src')
-    #print(image_data)
 
     if (page_data == []):
         return None
@@ -31,19 +29,24 @@ def get_image_city_data(city_name):
     image_data = tree.xpath('//tr[@class="grafika-z-wikidanych"]/td/a/img/@src')
 
     if (image_data == []):
-        return None
+        image_data = tree.xpath('//table[@class="infobox"]/tbody/tr/td/a[@class="image"]/img/@src')
+
+        if (image_data == []):
+            return None
+        else:
+            return image_data
     else:
         return image_data
 
 
-def city_data(city_name):
+def city_data(city_name, country_name):
     city_name = city_name.replace(' ', '_')
 
     city_data = get_basic_city_data(city_name)
     if (city_data == None):
         city_data = get_basic_city_data(city_name + "_(miasto)")
     if (city_data == None):
-        city_data = get_basic_city_data(city_name + "_(Włochy)") #_(Nazwa Państwa) - my guess
+        city_data = get_basic_city_data(city_name + "_(" + country_name + ")") #_(Nazwa Państwa) - my guess
     if (city_data == None):
         return None
 
@@ -64,6 +67,9 @@ def city_data(city_name):
                 table.append("Położenie")
             elif (city_data[i].find("Kod") != -1 and city_data[i+1].find("ISTAT") != -1):
                 print("Connecting two places - KOD ISTAT")
+                city_data[i+1] = "Kod " + city_data[i+1]
+            elif (city_data[i].find("Kod") != -1 and city_data[i+1].find("ISO") != -1):
+                print("Connecting two places - KOD ISO")
                 city_data[i+1] = "Kod " + city_data[i+1]
             elif (city_data[i].find("TERC") != -1 and city_data[i+2].find("TERYT") != -1):
                 print("Connecting two places - TERC (TERYT)")
@@ -97,7 +103,9 @@ def city_data(city_name):
                 table[i+1] = table[i+1].replace(",", '°')
                 del table[i+2]
             except ValueError:
-                print("false alarm - coordinates")  
+                print("false alarm - coordinates")
+            except Exception as ex:
+                print("Something went wrong - " + str(ex))
         elif (table[i].find("miasto") != -1 and table[i+1] == 'i' or table[i].find("miasto") != -1 and table[i+1] == 'w' ):
             print("Connecting two places - TYPE OF PLACE")
             table[i] = table[i] + ' ' + table[i+1] + ' ' + table[i+2]
@@ -116,9 +124,8 @@ def city_data(city_name):
         
         i+=1
 
-    #This loops exists because I need to delete the images titles from the array
+    #WHILE LOOP - This loop exists because I need to delete images titles from the array
     while(True):
-        #print(table)
         if (table[1].find("Państwo") == -1 and table[1].find("miasto") == -1 and table[1].find("gmina") == -1):
             del table[1]
             print("deleted words")
@@ -143,7 +150,7 @@ def city_data(city_name):
     if (table[1] == "Państwo" or table[1] == "Region"):
         table.insert(0, "Nazwa")
 
-    #BIG TRY _ POPULACJA
+    #TRY_EXCEPT - I'm using it to check if there even is "Populacja" and decide what to do next after checking if there is a date after it
     try:
         inx = table.index("Populacja")
 
@@ -153,7 +160,7 @@ def city_data(city_name):
         print("There was no - Populacja")
 
 
-    #IMAGE DATA
+    #IMAGE DATA - I'm getting addititional image data for the city
     img_data = get_image_city_data(city_name)
     if (img_data == None):
         img_data = get_image_city_data(city_name + "_(miasto)")
@@ -175,8 +182,9 @@ def city_data(city_name):
         j+=1
 
     if (img_data != [] and img_data != None):
-        ntable.insert(len(ntable)-1, ['IMG_SRC', img_data[0]])
+        ntable.insert(len(ntable), ['IMG_SRC', img_data[0]])
 
     return ntable
 
-#print(city_data("Dzierżyńska_Góra"))
+print(city_data("Tokio", "Japonia"))
+print(city_data("Seto", "Japonia"))
