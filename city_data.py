@@ -6,7 +6,7 @@ import requests
 
 def get_basic_city_data(city_name):
     print(city_name)
-    page = requests.get('https://pl.wikipedia.org/wiki/' + city_name)
+    page = requests.get('https://pl.wikipedia.org' + city_name)
 
     if (page.status_code != 200):
         return None
@@ -20,7 +20,7 @@ def get_basic_city_data(city_name):
         return page_data
 
 def get_image_city_data(city_name):
-    page = requests.get('https://pl.wikipedia.org/wiki/' + city_name)
+    page = requests.get('https://pl.wikipedia.org' + city_name)
 
     if (page.status_code != 200):
         return None
@@ -39,18 +39,11 @@ def get_image_city_data(city_name):
         return image_data
 
 
-def city_data(city_name, country_name):
-    city_name = city_name.replace(' ', '_')
-
+def city_data(city_name):
+    
     city_data = get_basic_city_data(city_name)
     if (city_data == None):
-        city_data = get_basic_city_data(city_name + "_(miasto)")
-    if (city_data == None):
-        city_data = get_basic_city_data(city_name + "_(" + country_name + ")") #_(Nazwa Państwa) - my guess
-    if (city_data == None):
         return None
-
-    #print(city_data)
         
     i = 0
     table = []
@@ -134,8 +127,6 @@ def city_data(city_name, country_name):
             print("deleted second words")
         else:
             break
-    
-
 
     #ANOTHER BIG TRY
     if (table[1][0] == table[0][0] and table[1][1] == table[0][1]):
@@ -159,15 +150,16 @@ def city_data(city_name, country_name):
     except ValueError:
         print("There was no - Populacja")
 
+    #TRY_EXCEPT - I'm using it to check if there even is "Symbole japońskie" and decide what to do next after checking if there is a date after it
+    try:
+        inx = table.index("Symbole japońskie")
+
+        table.insert(inx + 1, " - ")
+    except ValueError:
+        print("There was no - Symbole japońskie")
 
     #IMAGE DATA - I'm getting addititional image data for the city
-    img_data = get_image_city_data(city_name)
-    if (img_data == None):
-        img_data = get_image_city_data(city_name + "_(miasto)")
-    if (img_data == None):
-        img_data = get_image_city_data(city_name + "_(Włochy)") #_(Nazwa Państwa) - my guess
-
-        
+    img_data = get_image_city_data(city_name)        
 
     #loop for new table
     ntable = []
@@ -185,6 +177,3 @@ def city_data(city_name, country_name):
         ntable.insert(len(ntable), ['IMG_SRC', img_data[0]])
 
     return ntable
-
-print(city_data("Tokio", "Japonia"))
-print(city_data("Seto", "Japonia"))

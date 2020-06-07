@@ -1,35 +1,4 @@
 {
-    "Tokio": {
-        "Nazwa": "Tokio",
-        "Państwo": "Japonia",
-        "Wyspa": "Honsiu",
-        "Region": "Kantō",
-        "Siedziba": "Shinjuku",
-        "Kod ISO 3166-2": "JP-13",
-        "Gubernator": "Yuriko Koike",
-        "Powierzchnia": "2190,93 km²",
-        "Populacja": "10.2019",
-        "liczba ludności": "13 942 856",
-        "gęstość": "6363,90 os.km²",
-        "Kod pocztowy": "163–8001",
-        "Adres urzędu": "Nishi-Shinjuku 2–8–1, | Shinjuku-ku, 163-8001 Tokio",
-        "Szczegółowy podział administracyjny": "Liczba jednostek administracyjnych",
-        "62": "Symbole japońskie",
-        "Drzewo": "miłorząb dwuklapowy",
-        "Kwiat": "Prunus × yedoensis",
-        "Ptak": "mewa śmieszka",
-        "Dane": "Brak",
-        "Error": "list index out of range"
-    },
-    "– stolica Japonii, będąca": {
-        "Dane": "Brak"
-    },
-    "jednocześnie": {
-        "Dane": "Brak"
-    },
-    "prefekturą kraju": {
-        "Dane": "Brak"
-    },
     "Akiruno": {
         "Nazwa": "Akiruno",
         "Państwo": "Japonia",
@@ -39,12 +8,12 @@
         "Powierzchnia": "73,47 km²",
         "Populacja": "2017",
         "liczba ludności": "81 154",
-        "Symbole japońskie": "Drzewo",
-        "Osmanthus fragrans": "Kwiat",
-        "Chryzantema": "Ptak",
-        "Pliszka": "Motacilla grandis",
-        "Położenie": "35°728917'N | 139°294117'E",
-        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Akiruno_City_Hall.JPG/240px-Akiruno_City_Hall.JPG"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Osmanthus fragrans",
+        "Kwiat": "Chryzantema",
+        "Ptak": "Pliszka",
+        "Motacilla grandis": "Położenie",
+        "Error": "list index out of range"
     },
     "Akishima": {
         "Nazwa": "Akishima",
@@ -58,11 +27,11 @@
         "gęstość": "111 449",
         "[": "potrzebny przypis",
         "]": "os.km²",
-        "Symbole japońskie": "Drzewo",
-        "wończa": "Kwiat",
-        "różanecznik": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "wończa",
+        "Kwiat": "różanecznik",
+        "Położenie": "35°705667'N | 139°353528'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Akishima_city_hall.JPG/240px-Akishima_city_hall.JPG"
     },
     "Chōfu": {
         "Nazwa": "Chōfu",
@@ -75,15 +44,29 @@
         "Populacja": "2010",
         "liczba ludności": "gęstość",
         "223 609": "10 386 os.km²",
-        "Symbole japońskie": "Drzewo",
-        "cynamonowiec kamforowy": "Kwiat",
-        "lagerstremia indyjska": "Ptak",
-        "szlarnik japoński": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "cynamonowiec kamforowy",
+        "Kwiat": "lagerstremia indyjska",
+        "Ptak": "szlarnik japoński",
+        "Położenie": "35°650000'N | 139°550000'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Route_20_in_Chofu%2C_Tokyo.jpg/240px-Route_20_in_Chofu%2C_Tokyo.jpg"
     },
     "Fuchū": {
-        "Dane": "Brak"
+        "Nazwa": "Fuchū",
+        "Państwo": "Japonia",
+        "Prefektura": "Tokio",
+        "Wyspa": "Honsiu",
+        "Region": "Kantō",
+        "Powierzchnia": "29,34 km²",
+        "Populacja": "2010",
+        "liczba ludności": "gęstość",
+        "255 453": "8707 os.km²",
+        "Symbole japońskie": " - ",
+        "Drzewo": "brzostownica japońska",
+        "Kwiat": "morela japońska",
+        "Ptak": "skowronek zwyczajny",
+        "Położenie": "35°668889'N | 139°477778'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/0/01/FuchuCityHallA.jpg/240px-FuchuCityHallA.jpg"
     },
     "Fussa": {
         "Nazwa": "Fussa",
@@ -95,12 +78,12 @@
         "Populacja": "2010",
         "liczba ludności": "gęstość",
         "59 856": "5845 os.km²",
-        "Symbole japońskie": "Drzewo",
-        "wończa": "Kwiat",
-        "różanecznik": "Ptak",
-        "bogatka wschodnia": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "wończa",
+        "Kwiat": "różanecznik",
+        "Ptak": "bogatka wschodnia",
+        "Położenie": "35°738722'N | 139°326778'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/9/99/Fussa_City_Hall.jpg/240px-Fussa_City_Hall.jpg"
     },
     "Hachiōji": {
         "Nazwa": "Hachiōji",
@@ -112,12 +95,12 @@
         "Populacja": "2010",
         "liczba ludności": "gęstość",
         "579 799": "3112 os.km²",
-        "Symbole japońskie": "Drzewo",
-        "miłorząb dwuklapowy": "Kwiat",
-        "lilia pozłacana": "Ptak",
-        "muchołówka błękitna": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "miłorząb dwuklapowy",
+        "Kwiat": "lilia pozłacana",
+        "Ptak": "muchołówka błękitna",
+        "Położenie": "35°666667'N | 139°316667'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Hachioji_montage.JPG/119px-Hachioji_montage.JPG"
     },
     "Hamura": {
         "Nazwa": "Hamura",
@@ -129,12 +112,12 @@
         "Populacja": "2010",
         "liczba ludności": "gęstość",
         "57 046": "5756 os.km²",
-        "Symbole japońskie": "Drzewo",
-        "miłorząb dwuklapowy": "Kwiat",
-        "sakura": "Ptak",
-        "sowica północna": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "miłorząb dwuklapowy",
+        "Kwiat": "sakura",
+        "Ptak": "sowica północna",
+        "Położenie": "35°767222'N | 139°310833'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Hamura_City_Hall.jpg/240px-Hamura_City_Hall.jpg"
     },
     "Higashikurume": {
         "Nazwa": "Higashikurume",
@@ -148,12 +131,12 @@
         "gęstość": "116 869",
         "[": "potrzebny przypis",
         "]": "os.km²",
-        "Symbole japońskie": "Drzewo",
-        "Miłorząb dwuklapowy": "Kwiat",
-        "Różanecznik": "Ptak",
-        "Sójka błękitna": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Miłorząb dwuklapowy",
+        "Kwiat": "Różanecznik",
+        "Ptak": "Sójka błękitna",
+        "Położenie": "35°758000'N | 139°529861'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Higashikurumecityoffice.jpg/240px-Higashikurumecityoffice.jpg"
     },
     "Higashimurayama": {
         "Nazwa": "Higashimurayama",
@@ -165,12 +148,12 @@
         "Populacja": "2010",
         "liczba ludności": "gęstość",
         "153 365": "8932 os.km²",
-        "Symbole japońskie": "Drzewo",
-        "brzostownica japońska": "Kwiat",
-        "różanecznik": "Ptak",
-        "pliszka siwa": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "brzostownica japońska",
+        "Kwiat": "różanecznik",
+        "Ptak": "pliszka siwa",
+        "Położenie": "35°750000'N | 139°466667'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/d/db/Higashimurayama_Station_West_2009.jpg/240px-Higashimurayama_Station_West_2009.jpg"
     },
     "Higashiyamato": {
         "Nazwa": "Higashiyamato",
@@ -182,11 +165,11 @@
         "Populacja": "2010",
         "liczba ludności": "gęstość",
         "83 073": "6135 os.km²",
-        "Symbole japońskie": "Drzewo",
-        "brzostownica japońska": "Kwiat",
-        "różanecznik": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "brzostownica japońska",
+        "Kwiat": "różanecznik",
+        "Położenie": "35°745278'N | 139°426667'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Higashiyamatocityoffice2.jpg/240px-Higashiyamatocityoffice2.jpg"
     },
     "Hino": {
         "Nazwa": "Hino",
@@ -199,12 +182,12 @@
         "Populacja": "2010",
         "liczba ludności": "gęstość",
         "179 464": "6519 os.km²",
-        "Symbole japońskie": "Drzewo",
-        "dąb": "Kwiat",
-        "złocień wielkokwiatowy": "Ptak",
-        "zimorodek zwyczajny": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "dąb",
+        "Kwiat": "złocień wielkokwiatowy",
+        "Ptak": "zimorodek zwyczajny",
+        "Położenie": "35°666667'N | 139°400000'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/3/35/Hino_City_Hall_Tokyo_Japan.jpg/240px-Hino_City_Hall_Tokyo_Japan.jpg"
     },
     "Inagi": {
         "Nazwa": "Inagi",
@@ -219,11 +202,10 @@
         "1 stycznia 2011": "liczba ludności",
         "gęstość": "84 740",
         "]": "os.km²",
-        "Symbole japońskie": "Drzewo",
-        "miłorząb dwuklapowy": "Kwiat",
-        "grusza chińska": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "miłorząb dwuklapowy",
+        "Kwiat": "grusza chińska",
+        "Położenie": "35°638056'N | 139°504722'E"
     },
     "Kiyose": {
         "Nazwa": "Kiyose",
@@ -235,12 +217,12 @@
         "Populacja": "2010",
         "liczba ludności": "gęstość",
         "74 088": "7271 os.km²",
-        "Symbole japońskie": "Drzewo",
-        "brzostownica japońska": "Kwiat",
-        "kamelia mała": "Ptak",
-        "sroka błękitna": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "brzostownica japońska",
+        "Kwiat": "kamelia mała",
+        "Ptak": "sroka błękitna",
+        "Położenie": "35°783333'N | 139°516667'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Kiyose_montages.JPG/191px-Kiyose_montages.JPG"
     },
     "Kodaira": {
         "Nazwa": "Kodaira",
@@ -252,12 +234,12 @@
         "Populacja": "2010",
         "liczba ludności": "gęstość",
         "187 039": "9142 os.km²",
-        "Symbole japońskie": "Drzewo",
-        "brzostownica japońska": "Kwiat",
-        "różanecznik": "Ptak",
-        "dzięcioł brązowolicy": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "brzostownica japońska",
+        "Kwiat": "różanecznik",
+        "Ptak": "dzięcioł brązowolicy",
+        "Położenie": "35°716667'N | 139°466667'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/8/83/Kodaira_City_Hall.jpg/240px-Kodaira_City_Hall.jpg"
     },
     "Koganei": {
         "Nazwa": "Koganei",
@@ -269,12 +251,12 @@
         "Populacja": "2010",
         "liczba ludności": "gęstość",
         "118 888": "10 493 os.km²",
-        "Symbole japońskie": "Drzewo",
-        "brzostownica japońska": "Kwiat",
-        "sakura": "Ptak",
-        "zimorodek zwyczajny": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "brzostownica japońska",
+        "Kwiat": "sakura",
+        "Ptak": "zimorodek zwyczajny",
+        "Położenie": "35°700000'N | 139°500000'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/4/4a/%E5%B0%8F%E9%87%91%E4%BA%95%E5%B8%82%E5%BD%B9%E6%89%80.JPG/240px-%E5%B0%8F%E9%87%91%E4%BA%95%E5%B8%82%E5%BD%B9%E6%89%80.JPG"
     },
     "Kokubunji": {
         "Nazwa": "Kokubunji",
@@ -286,11 +268,11 @@
         "Populacja": "2010",
         "liczba ludności": "gęstość",
         "120 733": "10 517 os.km²",
-        "Symbole japońskie": "Drzewo",
-        "brzostownica japońska": "Kwiat",
-        "różanecznik indyjski": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "brzostownica japońska",
+        "Kwiat": "różanecznik indyjski",
+        "Położenie": "35°716667'N | 139°466667'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Kokubunji_City_Hall.jpg/240px-Kokubunji_City_Hall.jpg"
     },
     "Komae": {
         "Nazwa": "Komae",
@@ -302,11 +284,11 @@
         "Populacja": "2010",
         "liczba ludności": "gęstość",
         "78 825": "12336 os.km²",
-        "Symbole japońskie": "Drzewo",
-        "miłorząb dwuklapowy": "Kwiat",
-        "różanecznik": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "miłorząb dwuklapowy",
+        "Kwiat": "różanecznik",
+        "Położenie": "35°635000'N | 139°578611'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Komae_City_Hall.jpg/240px-Komae_City_Hall.jpg"
     },
     "Kunitachi": {
         "Nazwa": "Kunitachi",
@@ -318,12 +300,12 @@
         "Populacja": "2010",
         "liczba ludności": "gęstość",
         "75 505": "9264 os.km²",
-        "Symbole japońskie": "Drzewo",
-        "miłorząb dwuklapowy": "Kwiat",
-        "morela japońska": "Ptak",
-        "sikora bogatka": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "miłorząb dwuklapowy",
+        "Kwiat": "morela japońska",
+        "Ptak": "sikora bogatka",
+        "Położenie": "35°683333'N | 139°433333'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Kunitachi_city_office.jpg/240px-Kunitachi_city_office.jpg"
     },
     "Machida": {
         "Nazwa": "Machida",
@@ -335,12 +317,12 @@
         "Populacja": "2010",
         "liczba ludności": "gęstość",
         "426 827": "5959 os.km²",
-        "Symbole japońskie": "Drzewo",
-        "brzostownica japońska": "Kwiat",
-        "szałwia błyszcząca": "Ptak",
-        "zimorodek zwyczajny": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "brzostownica japońska",
+        "Kwiat": "szałwia błyszcząca",
+        "Ptak": "zimorodek zwyczajny",
+        "Położenie": "35°550000'N | 139°450000'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/5/54/Machida-City-Office2013.jpg/240px-Machida-City-Office2013.jpg"
     },
     "Mitaka": {
         "Nazwa": "Mitaka",
@@ -352,11 +334,11 @@
         "Populacja": "2015-10-01",
         "liczba ludności": "gęstość",
         "186 936": "11 384 os.km²",
-        "Symbole japońskie": "Drzewo",
-        "miłorząb dwuklapowy": "Kwiat",
-        "Malus halliana": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "miłorząb dwuklapowy",
+        "Kwiat": "Malus halliana",
+        "Położenie": "35°685000'N | 139°559444'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Mitaka_City_Hall.JPG/240px-Mitaka_City_Hall.JPG"
     },
     "Musashimurayama": {
         "Nazwa": "Musashimurayama",
@@ -368,11 +350,11 @@
         "Populacja": "2010",
         "liczba ludności": "gęstość",
         "70 065": "4559 os.km²",
-        "Symbole japońskie": "Drzewo",
-        "Celtis jessoensis": "Kwiat",
-        "Ptak": "szlarnik japoński",
-        "Położenie": "35°754722'N | 139°387500'E",
-        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/6/64/Musashimurayama_city_hall.JPG/240px-Musashimurayama_city_hall.JPG"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Celtis jessoensis",
+        "Kwiat": "Ptak",
+        "szlarnik japoński": "Położenie",
+        "Error": "list index out of range"
     },
     "Musashino": {
         "Nazwa": "Musashino",
@@ -398,15 +380,15 @@
         "Populacja": "2010",
         "liczba ludności": "gęstość",
         "196 494": "12 397 os.km²",
-        "Symbole japońskie": "Drzewo",
-        "brzostownica japońska": "dereń kwiecisty",
-        "Kwiat": "azalia",
-        "wiosna": "słonecznik zwyczajny",
-        "lato": "kosmos podwójnie pierzasty",
-        "jesień": "narcyz",
-        "zima": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "brzostownica japońska",
+        "dereń kwiecisty": "Kwiat",
+        "azalia": "wiosna",
+        "słonecznik zwyczajny": "lato",
+        "kosmos podwójnie pierzasty": "jesień",
+        "narcyz": "zima",
+        "Położenie": "35°733333'N | 139°533333'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Nishitokyo_city_hall_Tanashi_building.JPG/240px-Nishitokyo_city_hall_Tanashi_building.JPG"
     },
     "Ōme": {
         "Nazwa": "Ōme",
@@ -421,12 +403,12 @@
         "[": "potrzebny przypis",
         "]": "os.km²",
         "Kod pocztowy": "198-8701",
-        "Symbole japońskie": "Drzewo",
-        "Kryptomeria japońska": "Kwiat",
-        "Morela japońska": "Ptak",
-        "Wierzbownik japoński": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Kryptomeria japońska",
+        "Kwiat": "Morela japońska",
+        "Ptak": "Wierzbownik japoński",
+        "Położenie": "35°787972'N | 139°275833'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/9/95/Mitake_Shrine.jpg/240px-Mitake_Shrine.jpg"
     },
     "Tachikawa": {
         "Nazwa": "Tachikawa",
@@ -439,11 +421,11 @@
         "Populacja": "1 kwietnia 2010",
         "liczba ludności": "gęstość",
         "178 048": "7303 os.km²",
-        "Symbole japońskie": "Drzewo",
-        "Brzostownica japońska": "Kwiat",
-        "Magnolia japońska": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Brzostownica japońska",
+        "Kwiat": "Magnolia japońska",
+        "Położenie": "35°683333'N | 139°416667'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/5/5b/2018_Showa_Memorial_Park_02.jpg/240px-2018_Showa_Memorial_Park_02.jpg"
     },
     "Tama": {
         "Nazwa": "Tama",
@@ -455,12 +437,12 @@
         "Populacja": "2010",
         "liczba ludności": "gęstość",
         "147 541": "6999 os.km²",
-        "Symbole japońskie": "Drzewo",
-        "miłorząb dwuklapowy": "Kwiat",
-        "Prunus jamasakura": "Ptak",
-        "turkawka wschodnia": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "miłorząb dwuklapowy",
+        "Kwiat": "Prunus jamasakura",
+        "Ptak": "turkawka wschodnia",
+        "Położenie": "35°633333'N | 139°433333'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/b/bb/%E8%81%96%E8%B9%9F%E6%A1%9C%E3%83%B6%E4%B8%98%E3%81%AE%E5%8C%97%E3%82%92%E6%B5%81%E3%82%8C%E3%82%8B%E5%A4%9A%E6%91%A9%E5%B7%9D130805.jpg/240px-%E8%81%96%E8%B9%9F%E6%A1%9C%E3%83%B6%E4%B8%98%E3%81%AE%E5%8C%97%E3%82%92%E6%B5%81%E3%82%8C%E3%82%8B%E5%A4%9A%E6%91%A9%E5%B7%9D130805.jpg"
     },
     "Aisai": {
         "Nazwa": "Aisai",
@@ -474,11 +456,11 @@
         "liczba ludności": "gęstość",
         "63 119": "946,3 os.km²",
         "Kod pocztowy": "496-8555",
-        "Symbole japońskie": "Drzewo",
-        "Zastrzalinowate": "Kwiat",
-        "Lotos orzechodajny": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Zastrzalinowate",
+        "Kwiat": "Lotos orzechodajny",
+        "Położenie": "35°152840'N | 136°728440'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Aisai_City_Office_in_Feb_2018_ac.jpg/240px-Aisai_City_Office_in_Feb_2018_ac.jpg"
     },
     "Ama": {
         "Nazwa": "Ama",
@@ -492,11 +474,11 @@
         "liczba ludności": "gęstość",
         "86 904": "3161,3 os.km²",
         "Kod pocztowy": "490-1291",
-        "Symbole japońskie": "Drzewo",
-        "Dereń kwiecisty": "Kwiat",
-        "Lilia": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Dereń kwiecisty",
+        "Kwiat": "Lilia",
+        "Położenie": "35°200444'N | 136°783222'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/0/08/Ama_city_center_area_Aerial_photograph.1987.jpg/240px-Ama_city_center_area_Aerial_photograph.1987.jpg"
     },
     "Anjō": {
         "Nazwa": "Anjō",
@@ -510,11 +492,11 @@
         "liczba ludności": "gęstość",
         "184 163": "2140,2 os.km²",
         "Kod pocztowy": "446-8501",
-        "Symbole japońskie": "Drzewo",
-        "Sosna Thunberga": "Kwiat",
-        "Szałwia błyszcząca": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Sosna Thunberga",
+        "Kwiat": "Szałwia błyszcząca",
+        "Położenie": "34°958722'N | 137°080333'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/4/4f/%E6%9C%AC%E8%AD%89%E5%AF%BA_%28%E5%AE%89%E5%9F%8E%E5%B8%82%2901.jpg/240px-%E6%9C%AC%E8%AD%89%E5%AF%BA_%28%E5%AE%89%E5%9F%8E%E5%B8%82%2901.jpg"
     },
     "Chiryū": {
         "Nazwa": "Chiryū",
@@ -528,11 +510,11 @@
         "liczba ludności": "gęstość",
         "70 494": "4322,1 os.km²",
         "Kod pocztowy": "472-8666",
-        "Symbole japońskie": "Drzewo",
-        "Brzostownica japońska": "Kwiat",
-        "Kosaciec gładki": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Brzostownica japońska",
+        "Kwiat": "Kosaciec gładki",
+        "Położenie": "35°001272'N | 137°050750'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Tiryuumatsuri7.JPG/240px-Tiryuumatsuri7.JPG"
     },
     "Chita": {
         "Nazwa": "Chita",
@@ -546,11 +528,11 @@
         "liczba ludności": "gęstość",
         "84 643": "1844,1 os.km²",
         "Kod pocztowy": "478-8601",
-        "Symbole japońskie": "Drzewo",
-        "Woskownica czerwona": "Kwiat",
-        "Różanecznik": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Woskownica czerwona",
+        "Kwiat": "Różanecznik",
+        "Położenie": "34°996556'N | 136°864722'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Umextukakouen1.JPG/240px-Umextukakouen1.JPG"
     },
     "Gamagōri": {
         "Nazwa": "Gamagōri",
@@ -564,11 +546,11 @@
         "liczba ludności": "gęstość",
         "81 150": "1426,4 os.km²",
         "Kod pocztowy": "443-8601",
-        "Symbole japońskie": "Drzewo",
-        "Cynamonowiec kamforowy": "Kwiat",
-        "Różanecznik": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Cynamonowiec kamforowy",
+        "Kwiat": "Różanecznik",
+        "Położenie": "34°843056'N | 137°219583'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Take_Island_from_Mount_Togami.jpg/240px-Take_Island_from_Mount_Togami.jpg"
     },
     "Handa": {
         "Nazwa": "Handa",
@@ -583,11 +565,11 @@
         "116 936": "2466 os.km²",
         "Nr kierunkowy": "+81 569",
         "Kod pocztowy": "475-8666",
-        "Symbole japońskie": "Drzewo",
-        "Sosna Thunberga": "Kwiat",
-        "Różanecznik indyjski": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Sosna Thunberga",
+        "Kwiat": "Różanecznik indyjski",
+        "Położenie": "34°891944'N | 136°938056'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/6/64/Kamezaki_Shiohi_Matsuri02.jpg/240px-Kamezaki_Shiohi_Matsuri02.jpg"
     },
     "Hekinan": {
         "Nazwa": "Hekinan",
@@ -601,11 +583,11 @@
         "liczba ludności": "gęstość",
         "71 362": "1919,9 os.km²",
         "Kod pocztowy": "447-8601",
-        "Symbole japońskie": "Drzewo",
-        "Dąb": "Kwiat",
-        "Iris ensata var. ensata": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Dąb",
+        "Kwiat": "Iris ensata var. ensata",
+        "Położenie": "34°884694'N | 136°993417'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Hekinan_city_office.JPG/240px-Hekinan_city_office.JPG"
     },
     "Ichinomiya": {
         "Nazwa": "Ichinomiya",
@@ -619,11 +601,11 @@
         "liczba ludności": "gęstość",
         "379 954": "3338,2 os.km²",
         "Kod pocztowy": "491-8501",
-        "Symbole japońskie": "Drzewo",
-        "Dereń kwiecisty": "Kwiat",
-        "Rozwar wielkokwiatowy": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Dereń kwiecisty",
+        "Kwiat": "Rozwar wielkokwiatowy",
+        "Położenie": "35°303889'N | 136°803056'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/2/28/Ichinomiya_City_Hall_2019-06_ac_%282%29.jpg/199px-Ichinomiya_City_Hall_2019-06_ac_%282%29.jpg"
     },
     "Inazawa": {
         "Nazwa": "Inazawa",
@@ -637,11 +619,11 @@
         "liczba ludności": "gęstość",
         "136 867": "1724,9 os.km²",
         "Kod pocztowy": "492-8269",
-        "Symbole japońskie": "Drzewo",
-        "Sosna": "Kwiat",
-        "Chryzantema wielkokwiatowa": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Sosna",
+        "Kwiat": "Chryzantema wielkokwiatowa",
+        "Położenie": "35°248056'N | 136°780250'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Kounomiya1.JPG/240px-Kounomiya1.JPG"
     },
     "Inuyama": {
         "Nazwa": "Inuyama",
@@ -655,11 +637,11 @@
         "liczba ludności": "gęstość",
         "74 308": "992,1 os.km²",
         "Kod pocztowy": "484-8501",
-        "Symbole japońskie": "Drzewo",
-        "Photinia glabra": "Kwiat",
-        "Sakura": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Photinia glabra",
+        "Kwiat": "Sakura",
+        "Położenie": "35°378611'N | 136°944500'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Meijimuralandscape2.JPG/240px-Meijimuralandscape2.JPG"
     },
     "Iwakura": {
         "Nazwa": "Iwakura",
@@ -673,11 +655,11 @@
         "liczba ludności": "gęstość",
         "47 562": "482-8686 os.km²",
         "Kod pocztowy": "23228-9",
-        "Symbole japońskie": "Drzewo",
-        "Cynamonowiec kamforowy": "Kwiat",
-        "Różanecznik": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Cynamonowiec kamforowy",
+        "Kwiat": "Różanecznik",
+        "Położenie": "35°279444'N | 136°871417'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Gojo-gawa_in_Iwakura_04.JPG/240px-Gojo-gawa_in_Iwakura_04.JPG"
     },
     "Kariya": {
         "Nazwa": "Kariya",
@@ -691,11 +673,11 @@
         "liczba ludności": "gęstość",
         "149 765": "2972,1 os.km²",
         "Kod pocztowy": "448-8501",
-        "Symbole japońskie": "Drzewo",
-        "Cynamonowiec kamforowy": "Kwiat",
-        "Kosaciec gładki": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Cynamonowiec kamforowy",
+        "Kwiat": "Kosaciec gładki",
+        "Położenie": "34°989278'N | 137°002139'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/0/08/Kariyaoasis1.JPG/240px-Kariyaoasis1.JPG"
     },
     "Kasugai": {
         "Nazwa": "Kasugai",
@@ -709,11 +691,11 @@
         "liczba ludności": "gęstość",
         "306 508": "3303,6 os.km²",
         "Kod pocztowy": "486-8686",
-        "Symbole japońskie": "Drzewo",
-        "Brzostownica japońska": "Kwiat",
-        "Sakura": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Brzostownica japońska",
+        "Kwiat": "Sakura",
+        "Położenie": "35°247500'N | 136°972222'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/5/51/Kasugai_City_Hall_ac_%281%29.jpg/240px-Kasugai_City_Hall_ac_%281%29.jpg"
     },
     "Kiyosu": {
         "Nazwa": "Kiyosu",
@@ -727,12 +709,12 @@
         "liczba ludności": "gęstość",
         "67 327": "3880,5 os.km²",
         "Kod pocztowy": "452-8569",
-        "Symbole japońskie": "Drzewo",
-        "Dereń kwiecisty": "Kwiat",
-        "Sakura": "i",
-        "tulipan": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Dereń kwiecisty",
+        "Kwiat": "Sakura",
+        "i": "tulipan",
+        "Położenie": "35°199806'N | 136°852861'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Kiyosu-jo%26ote-bashi.jpg/240px-Kiyosu-jo%26ote-bashi.jpg"
     },
     "Kitanagoya": {
         "Nazwa": "Kitanagoya",
@@ -746,11 +728,11 @@
         "liczba ludności": "gęstość",
         "84 133": "4579,9 os.km²",
         "Kod pocztowy": "481-8531",
-        "Symbole japońskie": "Drzewo",
-        "Osmanthus fragrans": "Kwiat",
-        "Różanecznik": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Osmanthus fragrans",
+        "Kwiat": "Różanecznik",
+        "Położenie": "35°245639'N | 136°865944'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Kitanagoya_City_Hall_West_branch_ac.jpg/240px-Kitanagoya_City_Hall_West_branch_ac.jpg"
     },
     "Komaki": {
         "Nazwa": "Komaki",
@@ -764,17 +746,48 @@
         "liczba ludności": "gęstość",
         "149 462": "2379,6 os.km²",
         "Kod pocztowy": "485-8650",
-        "Symbole japońskie": "Drzewo",
-        "Machilus thunbergii": "Kwiat",
-        "Różanecznik": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Machilus thunbergii",
+        "Kwiat": "Różanecznik",
+        "Położenie": "35°291000'N | 136°912111'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Komaki_Castle_02.JPG/240px-Komaki_Castle_02.JPG"
     },
     "Kōnan": {
-        "Dane": "Brak"
+        "Nazwa": "Kōnan",
+        "Państwo": "Japonia",
+        "Prefektura": "Aichi",
+        "Wyspa": "Honsiu",
+        "Region": "Chūbu",
+        "Burmistrz": "Kazunobu Sawada od 30.04.2015",
+        "Powierzchnia": "30,20 km²",
+        "Populacja": "2015.10.01",
+        "liczba ludności": "gęstość",
+        "98 359": "3256,9 os.km²",
+        "Kod pocztowy": "483-8701",
+        "Symbole japońskie": " - ",
+        "Drzewo": "Ilex rotunda",
+        "Kwiat": "Glicynia japońska",
+        "Położenie": "35°332083'N | 136°870667'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/6/68/Hotei-daibutsu1.JPG/240px-Hotei-daibutsu1.JPG"
     },
     "Miyoshi": {
-        "Dane": "Brak"
+        "Nazwa": "Miyoshi",
+        "Państwo": "Japonia",
+        "Prefektura": "Aichi",
+        "Wyspa": "Honsiu",
+        "Region": "Chūbu",
+        "Burmistrz": "Kenji Onoda od 08.12.2013",
+        "Powierzchnia": "32,19 km²",
+        "Populacja": "2015.10.01",
+        "liczba ludności": "gęstość",
+        "61 810": "1920,2 os.km²",
+        "Nr kierunkowy": "0561",
+        "Kod pocztowy": "470-0295",
+        "Symbole japońskie": " - ",
+        "Drzewo": "Sosna Thunberga",
+        "Kwiat": "Rhododendron indicum",
+        "Położenie": "35°089444'N | 137°074833'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Aichi_Miyoshi_City_Hall_ac.jpg/240px-Aichi_Miyoshi_City_Hall_ac.jpg"
     },
     "Nagakute": {
         "Nazwa": "Nagakute",
@@ -788,11 +801,11 @@
         "liczba ludności": "gęstość",
         "57 598": "2672,8 os.km²",
         "Kod pocztowy": "480-1196",
-        "Symbole japońskie": "Drzewo",
-        "Klon": "Kwiat",
-        "Różanecznik indyjski": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Klon",
+        "Kwiat": "Różanecznik indyjski",
+        "Położenie": "35°184000'N | 137°048694'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/f/fb/%E3%83%A2%E3%83%AA%E3%82%B3%E3%83%AD%E3%83%91%E3%83%BC%E3%82%AF1.JPG/240px-%E3%83%A2%E3%83%AA%E3%82%B3%E3%83%AD%E3%83%91%E3%83%BC%E3%82%AF1.JPG"
     },
     "Nagoja": {
         "Nazwa": "Nagoja",
@@ -807,11 +820,11 @@
         "2 295 638": "7032 os.km²",
         "Nr kierunkowy": "+81 52",
         "Kod pocztowy": "460-8508",
-        "Symbole japońskie": "Drzewo",
-        "Cynamonowiec kamforowy": "Kwiat",
-        "Lilia": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Cynamonowiec kamforowy",
+        "Kwiat": "Lilia",
+        "Położenie": "35°181389'N | 136°906389'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Japan_Nagoya.png/175px-Japan_Nagoya.png"
     },
     "Nishio": {
         "Nazwa": "Nishio",
@@ -825,11 +838,11 @@
         "liczba ludności": "gęstość",
         "167 990": "1042 os.km²",
         "Kod pocztowy": "445-8501",
-        "Symbole japońskie": "Drzewo",
-        "Cynamonowiec kamforowy": "Kwiat",
-        "Róża": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Cynamonowiec kamforowy",
+        "Kwiat": "Róża",
+        "Położenie": "34°861833'N | 137°061806'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nishio_city_office.JPG/240px-Nishio_city_office.JPG"
     },
     "Nisshin": {
         "Nazwa": "Nisshin",
@@ -843,11 +856,11 @@
         "liczba ludności": "gęstość",
         "87 977": "2520,1 os.km²",
         "Kod pocztowy": "470-0192",
-        "Symbole japońskie": "Drzewo",
-        "Osmanthus fragrans": "var. aurantiacus",
-        "Kwiat": "Hortensja ogrodowa",
-        "Położenie": "35°131972'N | 137°039444'E",
-        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/8/89/Iwasakijou3.JPG/240px-Iwasakijou3.JPG"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Osmanthus fragrans",
+        "var. aurantiacus": "Kwiat",
+        "Hortensja ogrodowa": "Położenie",
+        "Error": "list index out of range"
     },
     "Ōbu": {
         "Nazwa": "Ōbu",
@@ -861,11 +874,11 @@
         "liczba ludności": "gęstość",
         "89 157": "2648,8 os.km²",
         "Kod pocztowy": "474-0025",
-        "Symbole japońskie": "Drzewo",
-        "Ilex rotunda": "Kwiat",
-        "Gardenia jaśminowata": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Ilex rotunda",
+        "Kwiat": "Gardenia jaśminowata",
+        "Położenie": "35°011667'N | 136°963833'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/0/09/Obu_City_Hall_ac.jpg/240px-Obu_City_Hall_ac.jpg"
     },
     "Okazaki": {
         "Nazwa": "Okazaki",
@@ -879,12 +892,12 @@
         "liczba ludności": "gęstość",
         "381 051": "984,1 os.km²",
         "Kod pocztowy": "444-8601",
-        "Symbole japońskie": "Drzewo",
-        "Sosna Thunberga": "Kwiat",
-        "Glicynia japońska": "sakura",
-        "Ptak": "Pliszka czarnogrzbieta",
-        "Położenie": "34°954333'N | 137°174361'E",
-        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/7/73/Otogawa-Myodaibashi-2.jpg/240px-Otogawa-Myodaibashi-2.jpg"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Sosna Thunberga",
+        "Kwiat": "Glicynia japońska",
+        "sakura": "Ptak",
+        "Pliszka czarnogrzbieta": "Położenie",
+        "Error": "list index out of range"
     },
     "Owariasahi": {
         "Nazwa": "Owariasahi",
@@ -898,11 +911,11 @@
         "liczba ludności": "gęstość",
         "80 787": "3841,5 os.km²",
         "Kod pocztowy": "488-8666",
-        "Symbole japońskie": "Drzewo",
-        "Cynamonowiec kamforowy": "Kwiat",
-        "Słonecznik zwyczajny": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Cynamonowiec kamforowy",
+        "Kwiat": "Słonecznik zwyczajny",
+        "Położenie": "35°216528'N | 137°035361'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Asahi-Jo_rest_house.JPG/240px-Asahi-Jo_rest_house.JPG"
     },
     "Seto": {
         "Nazwa": "Seto",
@@ -916,11 +929,11 @@
         "liczba ludności": "gęstość",
         "129 046": "1158,4 os.km²",
         "Kod pocztowy": "489-8701",
-        "Symbole japońskie": "Drzewo",
-        "Ilex rotunda": "Kwiat",
-        "Kamelia japońska": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Ilex rotunda",
+        "Kwiat": "Kamelia japońska",
+        "Położenie": "35°223583'N | 137°084194'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Joukouji9.JPG/240px-Joukouji9.JPG"
     },
     "Shinshiro": {
         "Nazwa": "Shinshiro",
@@ -934,12 +947,12 @@
         "liczba ludności": "gęstość",
         "47 133": "94,4 os.km²",
         "Kod pocztowy": "441-1392",
-        "Symbole japońskie": "Drzewo",
-        "Wiśnia piłkowana": "Kwiat",
-        "Lilium auratum": "Ptak",
-        "Syczek zwyczajny": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Wiśnia piłkowana",
+        "Kwiat": "Lilium auratum",
+        "Ptak": "Syczek zwyczajny",
+        "Położenie": "34°899250'N | 137°498611'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/8/82/Nagashinofestival.JPG/240px-Nagashinofestival.JPG"
     },
     "Tahara": {
         "Nazwa": "Tahara",
@@ -953,11 +966,11 @@
         "liczba ludności": "gęstość",
         "62 364": "326,3 os.km²",
         "Kod pocztowy": "441-3492",
-        "Symbole japońskie": "Drzewo",
-        "Cynamonowiec kamforowy": "Kwiat",
-        "Kwiaty rzepaku": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Cynamonowiec kamforowy",
+        "Kwiat": "Kwiaty rzepaku",
+        "Położenie": "34°668750'N | 137°264222'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/b/b6/View_of_Central_Tahara_from_Mount_Zaou%2C_Tahara_2012.JPG/240px-View_of_Central_Tahara_from_Mount_Zaou%2C_Tahara_2012.JPG"
     },
     "Takahama": {
         "Takahama": "Widok na miasto z Parku Ōyama",
@@ -971,11 +984,11 @@
         "liczba ludności": "gęstość",
         "46 236": "3527 os.km²",
         "Kod pocztowy": "444-1398",
-        "Symbole japońskie": "Drzewo",
-        "Cynamonowiec kamforowy": "Kwiat",
-        "Złocień wielkokwiatowy": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Cynamonowiec kamforowy",
+        "Kwiat": "Złocień wielkokwiatowy",
+        "Położenie": "34°927611'N | 136°987694'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/3/38/View_of_Takahama_City_from_Ooyama_Park.jpg/240px-View_of_Takahama_City_from_Ooyama_Park.jpg"
     },
     "Tōkai": {
         "Nazwa": "Tōkai",
@@ -989,11 +1002,11 @@
         "liczba ludności": "gęstość",
         "111 944": "2578 os.km²",
         "Kod pocztowy": "476-8601",
-        "Symbole japońskie": "Drzewo",
-        "Cynamonowiec kamforowy": "Kwiat",
-        "Różanecznik indyjski": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Cynamonowiec kamforowy",
+        "Kwiat": "Różanecznik indyjski",
+        "Położenie": "35°023056'N | 136°902194'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shurakuendaibutu.JPG/160px-Shurakuendaibutu.JPG"
     },
     "Tokoname": {
         "Nazwa": "Tokoname",
@@ -1007,11 +1020,11 @@
         "liczba ludności": "gęstość",
         "56 547": "1012 os.km²",
         "Kod pocztowy": "479-8610",
-        "Symbole japońskie": "Drzewo",
-        "Sosna Thunberga": "Kwiat",
-        "Kamelia mała": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Sosna Thunberga",
+        "Kwiat": "Kamelia mała",
+        "Położenie": "34°886556'N | 136°832333'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Aichi_Tokoname13n4272.jpg/240px-Aichi_Tokoname13n4272.jpg"
     },
     "Toyoake": {
         "Nazwa": "Toyoake",
@@ -1025,11 +1038,11 @@
         "liczba ludności": "gęstość",
         "69 127": "2977 os.km²",
         "Kod pocztowy": "470-1195",
-        "Symbole japońskie": "Drzewo",
-        "Brzostownica japońska": "Kwiat",
-        "Słonecznik zwyczajny": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Brzostownica japońska",
+        "Kwiat": "Słonecznik zwyczajny",
+        "Położenie": "35°053639'N | 137°012833'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Okehazamakosenjou1.JPG/240px-Okehazamakosenjou1.JPG"
     },
     "Toyohashi": {
         "Nazwa": "Toyohashi",
@@ -1043,11 +1056,11 @@
         "liczba ludności": "gęstość",
         "374 765": "1431 os.km²",
         "Kod pocztowy": "440-8501",
-        "Symbole japońskie": "Drzewo",
-        "Cynamonowiec kamforowy": "Kwiat",
-        "Różanecznik": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Cynamonowiec kamforowy",
+        "Kwiat": "Różanecznik",
+        "Położenie": "34°769167'N | 137°391528'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Yoshida_Oohashi%2C_in_Toyohashi_2.jpg/240px-Yoshida_Oohashi%2C_in_Toyohashi_2.jpg"
     },
     "Toyokawa": {
         "Nazwa": "Toyokawa",
@@ -1062,22 +1075,30 @@
         "182 436": "1132 os.km²",
         "Nr kierunkowy": "0533",
         "Kod pocztowy": "442-0068",
-        "Symbole japońskie": "Drzewo",
-        "Sosna Thunberga": "Kwiat",
-        "Różanecznik indyjski": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Sosna Thunberga",
+        "Kwiat": "Różanecznik indyjski",
+        "Położenie": "34°826778'N | 137°375917'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/6/64/Toyokawa_Inari_%28Hatsumoude%29.jpg/240px-Toyokawa_Inari_%28Hatsumoude%29.jpg"
     },
     "Toyota": {
-        "Nazwa": "Toyota Motor Corporation",
+        "Nazwa": "Toyota",
         "Państwo": "Japonia",
-        "Siedziba": "Toyota",
-        "Data założenia": "28 sierpnia 1937",
-        "Forma prawna": "Spółka publiczna",
-        "Prezes": "Akio Toyoda",
-        "Zatrudnienie": "364 445",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Prefektura": "Aichi",
+        "Wyspa": "Honsiu",
+        "Region": "Chūbu",
+        "Burmistrz": "Toshihiko Ōta od 19.02.2012",
+        "Powierzchnia": "918,32 km²",
+        "Populacja": "2015.10.01",
+        "liczba ludności": "gęstość",
+        "422 542": "460,1 os.km²",
+        "Nr kierunkowy": "0565",
+        "Kod pocztowy": "471-8501",
+        "Symbole japońskie": " - ",
+        "Drzewo": "Brzostownica japońska",
+        "Kwiat": "Słonecznik zwyczajny",
+        "Położenie": "35°082417'N | 137°156333'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/0/03/Toyota-Sangokan-1.jpg/240px-Toyota-Sangokan-1.jpg"
     },
     "Tsushima": {
         "Nazwa": "Tsushima",
@@ -1091,11 +1112,11 @@
         "liczba ludności": "gęstość",
         "63 431": "2528 os.km²",
         "Kod pocztowy": "496-8686",
-        "Symbole japońskie": "Drzewo",
-        "Sosna Thunberga": "Kwiat",
-        "Glicynia japońska": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Sosna Thunberga",
+        "Kwiat": "Glicynia japońska",
+        "Położenie": "35°177056'N | 136°741278'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/4/49/Tsushimatennosai1.JPG/240px-Tsushimatennosai1.JPG"
     },
     "Yatomi": {
         "Nazwa": "Yatomi",
@@ -1109,11 +1130,11 @@
         "liczba ludności": "gęstość",
         "43 269": "883 os.km²",
         "Kod pocztowy": "498-8501",
-        "Symbole japońskie": "Drzewo",
-        "Sakura": "Kwiat",
-        "Wyżlin większy": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Sakura",
+        "Kwiat": "Wyżlin większy",
+        "Położenie": "35°110000'N | 136°724667'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/4/48/Yatomi_City_Office_exterior_ac.jpg/240px-Yatomi_City_Office_exterior_ac.jpg"
     },
     "Akita": {
         "Nazwa": "Akita",
@@ -1126,11 +1147,11 @@
         "Populacja": "2013",
         "liczba ludności": "320 154",
         "Nr kierunkowy": "018",
-        "Symbole japońskie": "Drzewo",
-        "brzostownica japońska": "Kwiat",
-        "Rhododendron indicum": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "brzostownica japońska",
+        "Kwiat": "Rhododendron indicum",
+        "Położenie": "39°716667'N | 140°100000'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/3/39/Tsuchizaki_Port_1.jpg/240px-Tsuchizaki_Port_1.jpg"
     },
     "Daisen": {
         "Nazwa": "Daisen",
@@ -1142,12 +1163,12 @@
         "Populacja": "2010",
         "liczba ludności": "88 301",
         "Nr kierunkowy": "018",
-        "Symbole japońskie": "Drzewo",
-        "Brzostownica": "Kwiat",
-        "Kosmos": "Ptak",
-        "Zimorodek": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Brzostownica",
+        "Kwiat": "Kosmos",
+        "Ptak": "Zimorodek",
+        "Położenie": "39°450000'N | 140°483333'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Suwa-Jinja_in_Daisen%2C_Akita.jpg/240px-Suwa-Jinja_in_Daisen%2C_Akita.jpg"
     },
     "Katagami": {
         "Nazwa": "Katagami",
@@ -1158,12 +1179,12 @@
         "Powierzchnia": "97,96 km²",
         "Populacja": "2014",
         "liczba ludności": "33 995",
-        "Symbole japońskie": "Drzewo",
-        "Sosna Thunberga": "Kwiat",
-        "Róża": "Ptak",
-        "Czapla biała": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Sosna Thunberga",
+        "Kwiat": "Róża",
+        "Ptak": "Czapla biała",
+        "Położenie": "39°866667'N | 139°983333'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Katagami_paddy_fields.jpg/240px-Katagami_paddy_fields.jpg"
     },
     "Kazuno": {
         "Nazwa": "Kazuno",
@@ -1175,11 +1196,11 @@
         "Populacja": "2014",
         "liczba ludności": "33 593",
         "Kod pocztowy": "018-51xx",
-        "Symbole japońskie": "Drzewo",
-        "Sorbus commixta": "Kwiat",
-        "Sakura": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Sorbus commixta",
+        "Kwiat": "Sakura",
+        "Położenie": "40°183333'N | 140°783333'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Kazunoshiyakusyo.jpg/240px-Kazunoshiyakusyo.jpg"
     },
     "Kita-Akita": {
         "Nazwa": "Kita-Akita",
@@ -1191,12 +1212,12 @@
         "Powierzchnia": "1 152,57 km²",
         "Populacja": "2014",
         "liczba ludności": "35 104",
-        "Symbole japońskie": "Drzewo",
-        "Fagus crenata": "Kwiat",
-        "Hortensja": "Ptak",
-        "dzięcioł czarny": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Fagus crenata",
+        "Kwiat": "Hortensja",
+        "Ptak": "dzięcioł czarny",
+        "Położenie": "40°216667'N | 140°366667'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Kitaakita_Municipal_Hospital_2.jpg/240px-Kitaakita_Municipal_Hospital_2.jpg"
     },
     "Nikaho": {
         "Nazwa": "Nikaho",
@@ -1207,11 +1228,11 @@
         "Powierzchnia": "242 km²",
         "Populacja": "2013",
         "liczba ludności": "26 407",
-        "Symbole japońskie": "Drzewo",
-        "Cedr": "Kwiat",
-        "Albizia julibrissin": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Cedr",
+        "Kwiat": "Albizia julibrissin",
+        "Położenie": "39°383333'N | 140°083333'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Nasonoshirataki_kisakata_2005-11-05.JPG/240px-Nasonoshirataki_kisakata_2005-11-05.JPG"
     },
     "Noshiro": {
         "Nazwa": "Noshiro",
@@ -1238,11 +1259,11 @@
         "liczba ludności": "77 169",
         "Nr kierunkowy": "0186",
         "Kod pocztowy": "017-00xx",
-        "Symbole japońskie": "Drzewo",
-        "Sosna": "Kwiat",
-        "Chryzantema": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Sosna",
+        "Kwiat": "Chryzantema",
+        "Położenie": "40°266667'N | 140°550000'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Odate_City_Office_main_building_20181020.jpg/240px-Odate_City_Office_main_building_20181020.jpg"
     },
     "Oga": {
         "Nazwa": "Oga",
@@ -1253,11 +1274,11 @@
         "Powierzchnia": "240,80 km²",
         "Populacja": "2014",
         "liczba ludności": "30 582",
-        "Symbole japońskie": "Drzewo",
-        "Sosna": "Kwiat",
-        "Kamelia": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Sosna",
+        "Kwiat": "Kamelia",
+        "Położenie": "39°883333'N | 139°850000'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Oga_peninsula_z.JPG/240px-Oga_peninsula_z.JPG"
     },
     "Semboku": {
         "Nazwa": "Semboku",
@@ -1296,10 +1317,10 @@
         "Populacja": "2013",
         "liczba ludności": "82,004",
         "Kod pocztowy": "015-xxxx",
-        "Symbole japońskie": "Kwiat",
-        "Sakura": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Kwiat": "Sakura",
+        "Położenie": "39°383333'N | 140°083333'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/4/42/View_from_Honmaru-no-yakata_in_Honjo_Park.jpg/240px-View_from_Honmaru-no-yakata_in_Honjo_Park.jpg"
     },
     "Yuzawa": {
         "Nazwa": "Yuzawa",
@@ -1311,11 +1332,11 @@
         "Powierzchnia": "790,72 km²",
         "Populacja": "2015",
         "liczba ludności": "46 613",
-        "Symbole japońskie": "Drzewo",
-        "Sosna": "Kwiat",
-        "Dalia": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Sosna",
+        "Kwiat": "Dalia",
+        "Położenie": "39°150000'N | 140°483333'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/0/0d/%E6%B9%AF%E6%B2%A2%E5%B8%82%E5%BD%B9%E6%89%80.jpg/240px-%E6%B9%AF%E6%B2%A2%E5%B8%82%E5%BD%B9%E6%89%80.jpg"
     },
     "Aomori": {
         "Aomori": "Widok na miasto z Hakkōda",
@@ -1328,12 +1349,12 @@
         "Populacja": "2014",
         "liczba ludności": "296 215",
         "Nr kierunkowy": "017",
-        "Symbole japońskie": "Drzewo",
-        "Abies mariesii": "Kwiat",
-        "Róża pomarszczona": "Ptak",
-        "Puszczyk uralski": "Położenie",
-        "Dane": "Brak",
-        "Error": "list index out of range"
+        "Symbole japońskie": " - ",
+        "Drzewo": "Abies mariesii",
+        "Kwiat": "Róża pomarszczona",
+        "Ptak": "Puszczyk uralski",
+        "Położenie": "40°816667'N | 140°750000'E",
+        "IMG_SRC": "//upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Aomori_city_from_Hakkoda.jpg/240px-Aomori_city_from_Hakkoda.jpg"
     },
     "Goshogawara": {
         "Nazwa": "Goshogawara",

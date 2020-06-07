@@ -9,15 +9,17 @@ import copy
 
 #page = requests.get('https://pl.wikipedia.org/wiki/Miasta_we_W%C5%82oszech')
 #page = requests.get('https://pl.wikipedia.org/wiki/Miasta_w_Holandii')
-page = requests.get('https://pl.wikipedia.org/wiki/Miasta_na_Bia%C5%82orusi')
+#page = requests.get('https://pl.wikipedia.org/wiki/Miasta_na_Bia%C5%82orusi')
 #page = requests.get('https://pl.wikipedia.org/wiki/Miasta_Aruby')
 page = requests.get('https://pl.wikipedia.org/wiki/Miasta_w_Japonii')
 tree = html.fromstring(page.content)
 
-ogtable = tree.xpath('//div[@id="mw-content-text"]/div/ul/li/descendant-or-self::text()')
+ogtable = tree.xpath('//div[@id="mw-content-text"]/div/ul/li/a/descendant-or-self::text()')
+hrefs = tree.xpath('//div[@id="mw-content-text"]/div/ul/li/a//@href')
 
 i = 0
 for ele in ogtable: #LOOP FOR CLEANING
+
     if (i + 1 < len(ogtable)):
         if (ogtable[i].find("(") != -1):
             del ogtable[i]
@@ -47,7 +49,7 @@ for ele in table:
     ntable[zw.encode("utf-8").decode("utf-8")] = {}
 
 
-    c_data = city_data(zw, "Aruba")
+    c_data = city_data(hrefs[i])
 
     try:
         if(c_data != None):
