@@ -116,16 +116,20 @@ def city_data(city_name):
         
         i+=1
 
-    #WHILE LOOP - This loop exists because I need to delete images titles from the array
-    while(True):
-        if (table[1].find("Państwo") == -1 and table[1].find("miasto") == -1 and table[1].find("gmina") == -1):
-            del table[1]
-            print("deleted words")
-        elif (table[1].find("gmina") != -1 and table[2].find("Państwo") == -1 or table[1].find("gmina") != -1 and table[2].find("Państwo") == -1):
-            del table[2]
-            print("deleted second words")
-        else:
-            break
+    try:
+        #WHILE LOOP - This loop exists because I need to delete images titles from the array
+        while(True):
+            if (table[1].find("Państwo") == -1 and table[1].find("miasto") == -1 and table[1].find("gmina") == -1):
+                del table[1]
+                print("deleted words")
+            elif (table[1].find("gmina") != -1 and table[2].find("Państwo") == -1 or table[1].find("gmina") != -1 and table[2].find("Państwo") == -1):
+                del table[2]
+                print("deleted second words")
+            else:
+                break
+    except Exception as ex:
+        print("There was something really bad going on - Return Nothing From Here")
+        return None
 
     #ANOTHER BIG TRY
     if (table[1][0] == table[0][0] and table[1][1] == table[0][1]):
