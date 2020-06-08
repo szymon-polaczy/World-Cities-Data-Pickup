@@ -38,9 +38,8 @@ def get_image_city_data(city_name):
     else:
         return image_data
 
-
 def city_data(city_name):
-    
+
     city_data = get_basic_city_data(city_name)
     if (city_data == None):
         return None

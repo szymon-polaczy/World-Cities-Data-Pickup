@@ -42,7 +42,7 @@ ntable = {}
 for ele in table:
     zw = table[i]
 
-    #BANNED CITIES BECAUSE OF NAMES
+    #BANNED CITIES BECAUSE OF NAMES - I DON"T THINK THIS SHOULD APPLY NOW
     if (zw == "Boskoop" or zw == "Mutsu"):
         continue
 
