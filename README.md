@@ -11,7 +11,7 @@
 - [x] there are cities that have only have of their name as a link and because of that the name gets split and we can't find the page for it - searching with next element in array to combat this, I fixed this by using hrefs that are on the site instead of names
 - [ ] split main functions into smaller ones
 - [ ] make it as fast as it can be
-- [ ] start using try...except blocks
+- [x] start using try...except blocks
 - [x] better image capturing
 - [x] there are countries like - Japonia - which have different places to store theirs cities names - better city name capturing
 - [ ] Białoruś isn't working like it should - better city name capturing

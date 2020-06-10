@@ -131,13 +131,6 @@ def city_data(city_name):
         print("There was something really bad going on - Return Nothing From Here")
         return None
 
-    #ANOTHER BIG TRY
-    if (table[1][0] == table[0][0] and table[1][1] == table[0][1]):
-        del table[1]
-    
-    if (table[1].find("miasto") == -1 and table[1].find("gmina") == -1 and table[1].find("Państwo") == -1):
-        del table[1]
-
     if (table[1].find("’") != -1):
         del table[1]
         
@@ -166,15 +159,13 @@ def city_data(city_name):
 
     #loop for new table
     ntable = []
-    j = 0
     k = -1
-    for ele in table:
-        if (j % 2 == 0):
+    for i in range(len(table))
+        if (i % 2 == 0):
             ntable.append([])
             k+=1
 
         ntable[k].append(ele)
-        j+=1
 
     if (img_data != [] and img_data != None):
         ntable.insert(len(ntable), ['IMG_SRC', img_data[0]])

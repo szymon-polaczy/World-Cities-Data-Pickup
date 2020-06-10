@@ -5,8 +5,8 @@ from city_data import city_data
 import json
 import requests
 
-#page = requests.get('https://pl.wikipedia.org/wiki/Miasta_we_W%C5%82oszech')
-page = requests.get('https://pl.wikipedia.org/wiki/Miasta_w_Holandii')
+page = requests.get('https://pl.wikipedia.org/wiki/Miasta_we_W%C5%82oszech')
+#page = requests.get('https://pl.wikipedia.org/wiki/Miasta_w_Holandii')
 #page = requests.get('https://pl.wikipedia.org/wiki/Miasta_na_Bia%C5%82orusi')
 #page = requests.get('https://pl.wikipedia.org/wiki/Miasta_Aruby')
 #page = requests.get('https://pl.wikipedia.org/wiki/Miasta_w_Japonii')
