@@ -5,11 +5,11 @@ from city_data import city_data
 import json
 import requests
 
-page = requests.get('https://pl.wikipedia.org/wiki/Miasta_we_W%C5%82oszech')
+#page = requests.get('https://pl.wikipedia.org/wiki/Miasta_we_W%C5%82oszech')
 #page = requests.get('https://pl.wikipedia.org/wiki/Miasta_w_Holandii')
 #page = requests.get('https://pl.wikipedia.org/wiki/Miasta_na_Bia%C5%82orusi')
-#page = requests.get('https://pl.wikipedia.org/wiki/Miasta_Aruby')
-#page = requests.get('https://pl.wikipedia.org/wiki/Miasta_w_Japonii')
+#page = requests.get('https://pl.wikipedia.org/wiki/Miasta_Aruby')# - skup się dzisiaj na tym
+page = requests.get('https://pl.wikipedia.org/wiki/Miasta_w_Japonii')
 #page = requests.get('https://pl.wikipedia.org/wiki/Miasta_w_Jordanii') - DOESN'T WORK
 tree = html.fromstring(page.content)
 
@@ -17,7 +17,7 @@ hrefs = tree.xpath('//div[@id="mw-content-text"]/div/ul/li/a//@href')
 
 ntable = {}
 for i in range(len(hrefs)):
-    if (hrefs[i][0] != '/'):
+    if (hrefs[i][0] != '/' or hrefs[i][2] == '/'):
         continue
 
     ntable[hrefs[i].encode("utf-8").decode("utf-8")] = {}
