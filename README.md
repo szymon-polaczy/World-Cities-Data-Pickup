@@ -1,7 +1,7 @@
 # World-Cities-Data-Pickup
 
 ### What This Project Needs (This has to be installed)
-* [python] (https://www.python.org/)
+* [python](https://www.python.org/)
 * [lxml](https://lxml.de/)
 
 ---
