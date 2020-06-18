@@ -9,8 +9,8 @@
 ### What there is still to be done
 - [ ] split main functions into smaller ones
 - [ ] get this code mostly working with around 10 countries (Then I'm satisfied)
-- [ ] Białoruś isn't working like it should - better city name capturing - cities names are in tables not lists
 - [ ] in Miasta_w_Japonii it doesn't catch the Tokio - because it is in li/i/a not li/a
+- [x] Białoruś isn't working like it should - better city name capturing - cities names are in tables not lists
 - [x] delete unused if-statements
 - [x] clean up "loops-for-cleaning"
 - [x] where possible use simple "==" instead of array.find function

@@ -7,17 +7,22 @@ import requests
 
 page = requests.get('https://pl.wikipedia.org/wiki/Miasta_we_W%C5%82oszech')
 #page = requests.get('https://pl.wikipedia.org/wiki/Miasta_w_Holandii')
-#page = requests.get('https://pl.wikipedia.org/wiki/Miasta_na_Bia%C5%82orusi')
 #page = requests.get('https://pl.wikipedia.org/wiki/Miasta_Aruby')# - skup się dzisiaj na tym
 #page = requests.get('https://pl.wikipedia.org/wiki/Miasta_w_Japonii')
 #page = requests.get('https://pl.wikipedia.org/wiki/Miasta_w_Jordanii') - DOESN'T WORK
+page = requests.get('https://pl.wikipedia.org/wiki/Miasta_na_Bia%C5%82orusi')
 tree = html.fromstring(page.content)
 
-hrefs = tree.xpath('//div[@id="mw-content-text"]/div/ul/li/a//@href')
+#HREFS FOR CITIES IN LISTS
+#hrefs = tree.xpath('//div[@id="mw-content-text"]/div/ul/li/a//@href')
+
+#HREFS FOR CITIES IN TABLES - LIKE "BIAŁORUŚ"
+hrefs = tree.xpath('//table[@class="wikitable sortable"]/tbody/tr/td/a//@href')
+hrefs = list(dict.fromkeys(hrefs)) #Removing recurring values
 
 ntable = {}
 for i in range(len(hrefs)):
-    if (hrefs[i][0] != '/' or hrefs[i][2] == '/'):
+    if (hrefs[i][0] != '/' or hrefs[i][2] == '/' or hrefs[i][len(hrefs[i]) - 4] == '.'):
         continue
 
     ntable[hrefs[i].encode("utf-8").decode("utf-8")] = {}

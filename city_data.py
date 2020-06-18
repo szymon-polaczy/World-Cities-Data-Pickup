@@ -27,15 +27,17 @@ def city_data(city_name):
             bylo_panstwo = True
             if ((city_data[i].find("Kod") != -1 and city_data[i+1].find("ISTAT") != -1) or
                 (city_data[i].find("Kod") != -1 and city_data[i+1].find("ISO") != -1) or 
-                (city_data[i].find("TERC") != -1 and city_data[i+2].find("TERYT") != -1)):
-                print("Connecting two places - KOD ISTAT / KOD ISO / TERC (TERYT)")
+                (city_data[i].find("TERC") != -1 and city_data[i+1].find("TERYT") != -1) or 
+                (city_data[i].find("Liczba") != -1 and city_data[i+1].find("rejonów") != -1) or
+                (city_data[i].find("Liczba") != -1 and city_data[i+1].find("sielsowietów") != -1)):
+                print("Connecting two places - KOD ISTAT / KOD ISO / TERC (TERYT) / Liczba rejonów / Liczba sielsowietów")
                 city_data[i+1] = city_data[i] + city_data[i+1]
             elif (city_data[i].find("Urząd miejski") != -1 or city_data[i].find("Adres urzędu") != -1):
                 print("Connecting two places - URZĄD MIEJSKI | ADRES URZĘDU")
                 city_data[i+2] = city_data[i+1] + ' | ' + city_data[i+2]
                 table.append(ele)
                 del city_data[i+1]
-            elif (ele == "Flaga" or ele == "flaga" or ele == "Herb" or ele == "herb" or ele.find("Plan") != -1 or (ele.find("[") != -1 and ele.find("]") != -1)):
+            elif (ele == "Flaga" or ele == "flaga" or ele == "Herb" or ele == "herb" or ele.find("Plan") != -1 or (ele.find("[") != -1 and ele.find("]") != -1)): #I THINK THIS IS NOT NEEDED _ MAYBE JUST THE []
                 print("Deleted unused data")
             elif (ele.find("Położenie") != -1):
                 break
@@ -54,12 +56,22 @@ def city_data(city_name):
             if ((table[i - 1].find("km²") != -1 and table[i].find("km²") != -1) or table[i] == "km²"):
                 table[i - 1] = table[i - 1] + ' ' + table[i]
                 del table[i]
-            elif (table[i] == "potrzebny przypis" or len(table[i]) <= 1):
+            elif (table[i] == "potrzebny przypis" or table[i] == '' or table[i] == ','):
                 del table[i]
         except Exception as ex:
             print(ex)
 
         i+=1
+
+    #TRY_EXCEPT - Check if there is "Prawa miejskie" and what is after them
+    try:
+        inx = table.index("Prawa miejskie")
+
+        if (table[inx + 2].isnumeric() == True):
+            table[inx + 1] = table[inx + 1] + ' ' + table[inx + 2]
+            del table[inx + 2]
+    except ValueError:
+        print("There was no - Prawa miejskie")
 
     #TRY_EXCEPT - Check if there is something extra between "Burmistrz" and "Powierzchnia"
     try:
@@ -71,6 +83,17 @@ def city_data(city_name):
             del table[inx_b + 2]
     except ValueError:
         print("There was no - Burmistrz or Powierzchnia")
+
+    #TRY_EXCEPT - Check if there is something extra between "Zarządzający" and "Powierzchnia"
+    try:
+        inx_b = table.index("Zarządzający")
+        inx_p = table.index("Powierzchnia")
+
+        if (inx_p - inx_b == 3):
+            table[inx_b + 1] = table[inx_b + 1] + ' ' + table[inx_b + 2]
+            del table[inx_b + 2]
+    except ValueError:
+        print("There was no - Zarządzający or Powierzchnia")
 
     #TRY_EXCEPT - set correct position for "liczba ludności" and "gęstość"
     try:
@@ -103,6 +126,15 @@ def city_data(city_name):
         table.insert(inx + 1, " - ")
     except ValueError:
         print("There was no - Symbole japońskie")
+
+    #TRY_EXCEPT - check if there is "Szczegółowy podział administracyjny", if there is insert dummy data
+    try:
+        inx = table.index("Szczegółowy podział administracyjny")
+
+        table.insert(inx + 1, " - ")
+    except ValueError:
+        print("There was no - Szczegółowy podział administracyjny")
+
 
     #IMAGE DATA - I'm getting addititional image data for the city
     img_data = tree.xpath('//tr[@class="grafika-z-wikidanych"]/td/a/img/@src')
