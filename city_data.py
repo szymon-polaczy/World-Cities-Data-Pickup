@@ -2,7 +2,7 @@
 
 from lxml import html
 from muf import clear_string
-import requests    
+import requests
 
 def city_data(city_name):
     print(city_name)
@@ -25,25 +25,17 @@ def city_data(city_name):
 
         if (ele != '' and ele != ' ' and (ele.find("Państwo") != -1 or bylo_panstwo == True)):
             bylo_panstwo = True
-            if (city_data[i].find("Kod") != -1 and city_data[i+1].find("ISTAT") != -1):
-                print("Connecting two places - KOD ISTAT")
-                city_data[i+1] = "Kod " + city_data[i+1]
-            elif (city_data[i].find("Kod") != -1 and city_data[i+1].find("ISO") != -1):
-                print("Connecting two places - KOD ISO")
-                city_data[i+1] = "Kod " + city_data[i+1]
-            elif (city_data[i].find("TERC") != -1 and city_data[i+2].find("TERYT") != -1):
-                print("Connecting two places - TERC (TERYT)")
-                city_data[i+2] = "TERC | " + city_data[i+2]
+            if ((city_data[i].find("Kod") != -1 and city_data[i+1].find("ISTAT") != -1) or
+                (city_data[i].find("Kod") != -1 and city_data[i+1].find("ISO") != -1) or 
+                (city_data[i].find("TERC") != -1 and city_data[i+2].find("TERYT") != -1)):
+                print("Connecting two places - KOD ISTAT / KOD ISO / TERC (TERYT)")
+                city_data[i+1] = city_data[i] + city_data[i+1]
             elif (city_data[i].find("Urząd miejski") != -1 or city_data[i].find("Adres urzędu") != -1):
                 print("Connecting two places - URZĄD MIEJSKI | ADRES URZĘDU")
                 city_data[i+2] = city_data[i+1] + ' | ' + city_data[i+2]
                 table.append(ele)
                 del city_data[i+1]
-            elif (ele.find("[") != -1 and ele.find("]") != -1):
-                print("Deleted unused data")
-            elif (ele.find("Flaga") != -1 or ele.find("Herb") != -1 or ele.find("flaga") != -1 or ele.find("herb") != -1):
-                print("Deleted unused data")
-            elif (ele.find("Plan") != -1):
+            elif (ele == "Flaga" or ele == "flaga" or ele == "Herb" or ele == "herb" or ele.find("Plan") != -1 or (ele.find("[") != -1 and ele.find("]") != -1)):
                 print("Deleted unused data")
             elif (ele.find("Położenie") != -1):
                 break
@@ -59,33 +51,52 @@ def city_data(city_name):
         table[i] = table[i].strip()
 
         try:
-            if (table[i] == ','):
-                del table[i]
-            elif (table[i - 2].find("Burmistrz") != -1 and table[i].find("PD") != -1 or table[i -2].find("Burmistrz") != -1 and table[i].find("VVD") != -1 or table[i -2].find("Burmistrz") != -1 and table[i].find("2014") != -1): #removing unnecessary words by the mayor's name
-                del table[i]
-            elif (table[i] == "km²"):
-                table[i-1] = table[i-1] + ' ' + table[i]
-                del table[i]
-            elif (table[i - 1].find("km²") != -1 and table[i].find("km²") != -1):
+            if ((table[i - 1].find("km²") != -1 and table[i].find("km²") != -1) or table[i] == "km²"):
                 table[i - 1] = table[i - 1] + ' ' + table[i]
                 del table[i]
-            elif (table[i] == "potrzebny przypis" or table[i] == ''):
+            elif (table[i] == "potrzebny przypis" or len(table[i]) <= 1):
                 del table[i]
         except Exception as ex:
             print(ex)
 
         i+=1
 
-    #TRY_EXCEPT - I'm using it to check if there even is "Populacja" and decide what to do next after checking if there is a date after it
+    #TRY_EXCEPT - Check if there is something extra between "Burmistrz" and "Powierzchnia"
+    try:
+        inx_b = table.index("Burmistrz")
+        inx_p = table.index("Powierzchnia")
+
+        if (inx_p - inx_b == 3):
+            table[inx_b + 1] = table[inx_b + 1] + ' ' + table[inx_b + 2]
+            del table[inx_b + 2]
+    except ValueError:
+        print("There was no - Burmistrz or Powierzchnia")
+
+    #TRY_EXCEPT - set correct position for "liczba ludności" and "gęstość"
+    try:
+        inx_b = table.index("liczba ludności")
+        inx_p = table.index("gęstość")
+
+        if (inx_p - inx_b == 1):
+            tmp = table[inx_b + 1]
+            table[inx_b + 1] = table[inx_b + 2]
+            table[inx_b + 2] = tmp
+    except ValueError:
+        print("There was no - Liczba ludności or Gęstość")
+
+    #TRY_EXCEPT - check if there is "Populacja" and corect date after
     try:
         inx = table.index("Populacja")
 
         if (table[inx + 1].find("liczba ludności") != -1 or table[inx + 1].find("gęstość") != -1):
             table.insert(inx + 1, "Brak daty")
+        elif (table[inx + 2].isnumeric() == True):
+            table[inx + 1] = table[inx + 1] + ' ' + table[inx + 2]
+            del table[inx + 2]
     except ValueError:
         print("There was no - Populacja")
 
-    #TRY_EXCEPT - I'm using it to check if there even is "Symbole japońskie" and decide what to do next after checking if there is a date after it
+    #TRY_EXCEPT - check if there is "Symbole japońskie", if there is insert dummy data
     try:
         inx = table.index("Symbole japońskie")
 
@@ -105,7 +116,10 @@ def city_data(city_name):
     #GEO DATA - I'm getting just the geo data directly from the wiki table
     geo_data = tree.xpath('//table[@class="infobox"]/tbody/tr/td/span/a/span/span/descendant-or-self::text()')
     if (geo_data != []):
-        geo_pres_data = geo_data[0] + ' | ' + geo_data[2]
+        geo_pres_data = {
+            "latitude": geo_data[0],
+            "longitude": geo_data[2]
+        }
 
     #NAME & TYPE OF THE CITY DATA - I'm trying to get the full name of the city and the type of it
     name_data = tree.xpath('//table[@class="infobox"]/tbody/tr/td/table/tbody/tr/td/span/descendant-or-self::text()')
@@ -122,17 +136,17 @@ def city_data(city_name):
         ntable[k].append(table[i])
 
     if (img_data != [] and img_data != None):
-        ntable.insert(0, ['IMG_SRC', img_data[0]])
+        ntable.insert(0, ['Img Source', img_data[0]])
 
     if (geo_data != []):
-        ntable.insert(0, ["GEO_LOCATION", geo_pres_data])
+        ntable.insert(0, ["Geo Location", geo_pres_data])
 
     if (type_data != []):
-        ntable.insert(0, ["RODZAJ MIEJSCOWOŚCI", type_data[1]])
+        ntable.insert(0, ["Rodzaj Miejscowośći", type_data[1]])
     else:
-        ntable.insert(0, ["RODZAJ MIEJSCOWOŚCI", "Brak Danych"])
+        ntable.insert(0, ["Rodzaj Miejscowośći", "Brak Danych"])
 
     if (name_data != []):
-        ntable.insert(0, ["NAZWA", name_data[0]])
+        ntable.insert(0, ["Nazwa", name_data[0]])
 
     return ntable
