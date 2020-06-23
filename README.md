@@ -8,8 +8,10 @@
 
 ### What there is still to be done
 - [ ] split main functions into smaller ones
-- [ ] get this code mostly working with around 10 countries (Then I'm satisfied)
 - [ ] in Miasta_w_Japonii it doesn't catch the Tokio - because it is in li/i/a not li/a
+- [ ] try using more build in python functions
+- [ ] update readme and github site with all the data I can give about this, what should be next and what would be better or why I did it like this
+- [x] get this code mostly working with around 10 countries (Then I'm satisfied)
 - [x] Białoruś isn't working like it should - better city name capturing - cities names are in tables not lists
 - [x] delete unused if-statements
 - [x] clean up "loops-for-cleaning"

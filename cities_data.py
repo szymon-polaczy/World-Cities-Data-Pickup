@@ -5,19 +5,24 @@ from city_data import city_data
 import json
 import requests
 
-page = requests.get('https://pl.wikipedia.org/wiki/Miasta_we_W%C5%82oszech')
+#page = requests.get('https://pl.wikipedia.org/wiki/Miasta_we_W%C5%82oszech')
 #page = requests.get('https://pl.wikipedia.org/wiki/Miasta_w_Holandii')
 #page = requests.get('https://pl.wikipedia.org/wiki/Miasta_Aruby')# - skup się dzisiaj na tym
 #page = requests.get('https://pl.wikipedia.org/wiki/Miasta_w_Japonii')
 #page = requests.get('https://pl.wikipedia.org/wiki/Miasta_w_Jordanii') - DOESN'T WORK
-page = requests.get('https://pl.wikipedia.org/wiki/Miasta_na_Bia%C5%82orusi')
+#page = requests.get('https://pl.wikipedia.org/wiki/Miasta_na_Bia%C5%82orusi')
+page = requests.get('https://pl.wikipedia.org/wiki/Miasta_w_Polsce')
 tree = html.fromstring(page.content)
 
 #HREFS FOR CITIES IN LISTS
 #hrefs = tree.xpath('//div[@id="mw-content-text"]/div/ul/li/a//@href')
 
 #HREFS FOR CITIES IN TABLES - LIKE "BIAŁORUŚ"
-hrefs = tree.xpath('//table[@class="wikitable sortable"]/tbody/tr/td/a//@href')
+#hrefs = tree.xpath('//table[@class="wikitable sortable"]/tbody/tr/td/a//@href')
+#hrefs = list(dict.fromkeys(hrefs)) #Removing recurring values
+
+#HREFS FOR CITIES IN TABLES LIKE LISTS - LIKE "POLSKA"
+hrefs = tree.xpath('//div[@id="mw-content-text"]/div/div/ul/li/a//@href')
 hrefs = list(dict.fromkeys(hrefs)) #Removing recurring values
 
 ntable = {}

@@ -37,7 +37,7 @@ def city_data(city_name):
                 city_data[i+2] = city_data[i+1] + ' | ' + city_data[i+2]
                 table.append(ele)
                 del city_data[i+1]
-            elif (ele == "Flaga" or ele == "flaga" or ele == "Herb" or ele == "herb" or ele.find("Plan") != -1 or (ele.find("[") != -1 and ele.find("]") != -1)): #I THINK THIS IS NOT NEEDED _ MAYBE JUST THE []
+            elif (ele.find("[") != -1 and ele.find("]") != -1 and city_data[i-1].find("Prawa miejskie") == -1): #ele == "Flaga" or ele == "flaga" or ele == "Herb" or ele == "herb" or ele.find("Plan") != -1 or ): #I THINK THIS IS NOT NEEDED _ MAYBE JUST THE []
                 print("Deleted unused data")
             elif (ele.find("Położenie") != -1):
                 break
@@ -45,23 +45,10 @@ def city_data(city_name):
                 table.append(ele)
         i+=1
 
-    #ANOTHER LOOP FOR END CLEANING
-    i = 0
-    for ele in table:
-        table[i] = table[i].replace(']', '')
-        table[i] = table[i].replace('[', '')
-        table[i] = table[i].strip()
-
-        try:
-            if ((table[i - 1].find("km²") != -1 and table[i].find("km²") != -1) or table[i] == "km²"):
-                table[i - 1] = table[i - 1] + ' ' + table[i]
-                del table[i]
-            elif (table[i] == "potrzebny przypis" or table[i] == '' or table[i] == ','):
-                del table[i]
-        except Exception as ex:
-            print(ex)
-
-        i+=1
+    #Additional Table Filtering
+    table = list(filter(lambda x: x != '.', table))
+    table = list(filter(lambda x: x != ',', table))
+    table = list(filter(lambda x: x != '', table))
 
     #TRY_EXCEPT - Check if there is "Prawa miejskie" and what is after them
     try:
@@ -94,6 +81,17 @@ def city_data(city_name):
             del table[inx_b + 2]
     except ValueError:
         print("There was no - Zarządzający or Powierzchnia")
+
+    #TRY_EXCEPT - Check if there is something extra between "Prawa miejskie" and "Burmistrz"
+    try:
+        inx_b = table.index("Prawa miejskie")
+        inx_p = table.index("Burmistrz")
+
+        if (inx_p - inx_b == 3): #NOT SURE WHY 4 AND NOT 3
+            table[inx_b + 1] = table[inx_b + 1] + ' ' + table[inx_b + 2]
+            del table[inx_b + 2]
+    except ValueError:
+        print("There was no - Prawa miejskie or Burmistrz")
 
     #TRY_EXCEPT - set correct position for "liczba ludności" and "gęstość"
     try:
@@ -135,6 +133,23 @@ def city_data(city_name):
     except ValueError:
         print("There was no - Szczegółowy podział administracyjny")
 
+    #ANOTHER LOOP FOR END CLEANING
+    i = 0
+    for ele in table:
+        table[i] = table[i].replace(']', '')
+        table[i] = table[i].replace('[', '')
+        table[i] = table[i].strip()
+
+        try:
+            if ((table[i - 1].find("km²") != -1 and table[i].find("km²") != -1) or table[i] == "km²" or table[i] == "m n.p.m." or (table[i].find("km²") != -1 and table[i-1].isnumeric() == True)):
+                table[i - 1] = table[i - 1] + ' ' + table[i]
+                del table[i]
+            elif (table[i] == "potrzebny przypis"):
+                del table[i]
+        except Exception as ex:
+            print(ex)
+
+        i+=1
 
     #IMAGE DATA - I'm getting addititional image data for the city
     img_data = tree.xpath('//tr[@class="grafika-z-wikidanych"]/td/a/img/@src')
@@ -182,3 +197,5 @@ def city_data(city_name):
         ntable.insert(0, ["Nazwa", name_data[0]])
 
     return ntable
+
+print(city_data("/wiki/S%C5%82ubice"))
